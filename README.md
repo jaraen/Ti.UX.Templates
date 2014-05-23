@@ -3,7 +3,9 @@
 
 ## Disclaimer
 
-This project is under active development, some parts can drastically change in short term.
+This project is under active development and its actual status is in alpha or “preview” phase. Some parts can drastically change in short term. 
+
+Use under your own risk. Bug reports, pull requests and any kind of collaboration are welcome.
 
 ## Description
 
