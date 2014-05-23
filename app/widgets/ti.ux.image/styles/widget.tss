@@ -1,0 +1,15 @@
+".container":{
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
+},
+"#img":{
+	top: 0, //'10dp',
+	// width:Ti.UI.FILL,
+	defaultImage:''
+},
+
+"#img[platform=android]":{
+	canScale:true,
+	enableZoomControls:false,
+	height:Ti.UI.SIZE
+}

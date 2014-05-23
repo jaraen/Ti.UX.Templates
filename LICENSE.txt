@@ -1,0 +1,21 @@
+License
+All parts of this project are fully open source and is GPL friendly. You can use it for commercial projects, open source projects, or really just about whatever you want.
+
+Attribution is not required, but appreciated. Among anything else, we will love to know how this project may help you.
+
+
+Credits
+Dreamed up by Sonia Villanueva and Javier Rayon in 2014.
+
+UX strategy and mock-ups by Sonia
+
+Titanium code and documentation by Javier
+
+Themes designs and extra energy push by Mai Berreando. She has contributed with some of the coolest designs we have seen, among some beautiful cactus. ;)
+
+We use the incredible work and technology done by:
+
+Font Awesome http://fortawesome.github.io/Font-Awesome/
+Appcelerator http://www.appcelerator.com/
+
+Orignal FontAwesome Titanium module by Kosuke Isobe https://github.com/k0sukey/TiIconicFont

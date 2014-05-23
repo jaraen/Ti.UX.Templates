@@ -1,0 +1,11 @@
+<Alloy>
+	<TableViewRow class="tableviewrow-rowitem" id="row">
+		<Label class="label-row-title" id="titleLbl" left="10"/>
+		<Label class="label-row-subtitle" id="subtitleLbl" textAlign="right" right="35"/>
+		<Label class="label-row-count" id="countLbl" backgroundColor="#bbb" color="#fff" textAlign="center" borderRadius="8" height="20" visible="false" right="35" />
+		<ImageView id="childrenImage" />
+		<View class="view-row-separator" />
+	</TableViewRow>
+</Alloy>
+
+

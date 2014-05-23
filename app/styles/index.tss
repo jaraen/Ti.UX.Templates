@@ -1,0 +1,17 @@
+".container": {
+	backgroundColor:"white"
+},
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+},
+"#directory":{
+	widgetId:'directory-test',
+	url:'http://www.app-maker.ch/CatalogueCategory/json/e031a0a1c9df70fd520164ccee05c1b0cb9fcbfd'
+}
+
+"#location":{
+	widgetId:'location-test',
+	url:'http://app-maker.ch/location/json/a3dbfefccc8bc69ae86ff5756c1cfe3e55fa658f'
+}

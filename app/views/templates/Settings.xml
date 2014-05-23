@@ -1,0 +1,81 @@
+<!--
+  The Titanium UX Template Library
+  http://www.uxmobilepatterns.com
+  
+  Settings: a settings form template
+  
+-->
+
+
+<Alloy>
+	<Window title="Settings">
+		
+		
+		<TableView backgroundColor="#eee" class="tableview-form">
+			<TableViewRow height="60"><Widget src="ti.ux.title" text="Settings are Wonderful"></Widget></TableViewRow>
+			<TableViewSection>
+				<HeaderView>
+					<View class="view-headerview-form" >
+						<Label class="label-tableviewsection-header" text="BASIC INFO" />
+						<View class="view-row-separator" />
+					</View>
+				</HeaderView>
+				
+				<Widget src="ti.ux.forms.row.text" title="" hintText="this is a hintText" />
+				
+				<Widget src="ti.ux.forms.row.optionspicker" title="Repeat" value="1" cancel="3" options="Never|Always|Each 15 minutes|Cancel" icon="fa-repeat"/>
+				
+				<Widget src="ti.ux.forms.row.switch" title="This is a switch" value="true" />
+				<Widget src="ti.ux.forms.row.switch" title="This is another switch" value="false" />
+			
+				<TableViewRow><View class="view-row-separator"/></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>
+			</TableViewSection>			
+
+			<!--TableViewSection>
+				<HeaderView>
+					<View class="view-headerview-form">
+						<Label class="label-tableviewsection-header" text="EVENT"/>
+						<View class="view-row-separator" />
+					</View>
+				</HeaderView>
+				
+				<Widget src="ti.ux.forms.row.switch" title="All day" value="true" />
+				<Widget src="ti.ux.rowitem" title="Starts" subtitle="not implemented"/>
+				<Widget src="ti.ux.rowitem" title="Ends" subtitle="not implemented"/>
+				
+				<TableViewRow><View class="view-row-separator"/></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>
+			</TableViewSection-->			
+				
+			<TableViewSection>
+				<HeaderView>
+					<View class="view-headerview-form">
+						<Label class="label-tableviewsection-header" text="SETTINGS" />
+						<View class="view-row-separator" />
+					</View>
+				</HeaderView>
+				
+				<Widget src="ti.ux.forms.row.optionspicker" title="Repeat" hintText="None selected" value="-1" options="Never|Always|Each 15 minutes"/>
+				
+				<Widget src="ti.ux.forms.row.optionspicker" title="Show as" value="0" options="Busy|Not disturb|Available|Not Connected"/>
+				
+				<Widget src="ti.ux.forms.row.optionspicker" title="Alert" value="0" options="15 min before|30 min before|1 hour before|1 day before"/>
+				
+				<Widget src="ti.ux.forms.row.optionspicker" title="Notifications" value="0" options="15 min before|30 min before|1 hour before|1 day before"/>
+				
+				<Widget src="ti.ux.forms.row.optionspicker" title="Invitees" value="0" options="15 min before|30 min before|1 hour before|1 day before"/>
+				
+				<Widget src="ti.ux.forms.row.switch" title="Add location" value="false" icon="fa-map-marker"  />
+				<Widget src="ti.ux.forms.row.switch" title="Share in Facebook" value="true" icon="fa-facebook-square" iconColor="#66f"/>
+				<Widget src="ti.ux.forms.row.switch" title="Share in Twitter" value="true"  icon="fa-twitter-square"  iconColor="#66f" />
+				
+				<TableViewRow><View class="view-row-separator"/></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>
+			</TableViewSection>			
+				
+			
+		</TableView>
+	</Window>
+</Alloy>
+

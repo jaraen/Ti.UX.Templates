@@ -1,0 +1,6 @@
+
+ "#childrenImage":{
+	right:8,
+	height:15, width:15,
+    image: WPATH("arrow.png") 
+ }

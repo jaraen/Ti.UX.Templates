@@ -1,0 +1,9 @@
+<Alloy>
+	<ScrollableView id="scrollable" showPagingControl="false" disableBounce="true" 
+			onPostlayout="linkScrollableView" onScrollEnd="updatePagingControl">
+
+	</ScrollableView>
+	<Widget src="ti.ux.pagingcontrol" id="pagingControl" top="0"/>
+</Alloy>
+
+

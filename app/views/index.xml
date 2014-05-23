@@ -1,0 +1,17 @@
+<!--
+  The Titanium UX Template Library
+  http://www.uxmobilepatterns.com
+-->
+
+<Alloy>
+	<NavigationWindow platform="ios" id="navWindow">
+		<Window title="The Titanium UX Library">
+			<Require src="MainMenu" id="menuView"></Require>
+		</Window>
+	</NavigationWindow>
+	
+	<Window title="The Titanium UX Library" platform="android" id="navWindow">
+		<Require src="MainMenu"></Require>
+	</Window>
+
+</Alloy>

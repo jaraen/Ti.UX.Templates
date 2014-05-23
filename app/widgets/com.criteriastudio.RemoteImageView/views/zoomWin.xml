@@ -1,0 +1,11 @@
+<Alloy>
+	<Window id="win" onOpen="fadein">
+	    <ScrollView id="scroll" platform="ios">
+			<!-- <Widget src="com.devault.RemoteImageView" id="img" /> -->
+			<ImageView id="img"/>
+	    </ScrollView>
+
+        <ImageView id="img" platform="android">
+
+	</Window>
+</Alloy>

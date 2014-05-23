@@ -1,0 +1,24 @@
+
+"TableView[platform=ios]":{
+	separatorStyle: Ti.UI.iPhone.TableViewSeparatorStyle.NONE
+},
+
+"TableViewRow":{	
+	height:Ti.UI.SIZE
+},
+
+"TableViewRow[platform=ios]":{
+	selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
+},
+
+".actionButton":{
+	backgroundColor:"#B399",
+	color:'#fff',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:14
+	},
+	left:"0",
+	right:"0",
+	height:"50" 
+}

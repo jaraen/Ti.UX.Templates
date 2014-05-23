@@ -1,0 +1,8 @@
+<Alloy>
+	<View class="view-height-width-fit" id="viewContainer">
+		<Widget src="ti.ux.iconfont" id="icon" class="icon-iconlabel"></Widget>
+		<Label class="label-iconlabel" id="label" />
+	</View>
+</Alloy>
+
+

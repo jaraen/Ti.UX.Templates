@@ -1,0 +1,14 @@
+<Alloy>
+	<TableViewRow class="tableviewrow-form-row" id="row" >
+		
+		<Widget src="ti.ux.iconfont" id="icon" class="fa-row-icon"></Widget>
+		
+		<Label class="label-row-title" id="titleLbl" />
+
+		<TextField class="textfield-row-control" id="field" />
+		
+		<View class="view-row-separator" />
+	</TableViewRow>
+</Alloy>
+
+

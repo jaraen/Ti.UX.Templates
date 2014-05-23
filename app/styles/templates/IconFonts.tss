@@ -1,0 +1,34 @@
+
+".fontIcon[platform=ios]":{
+	font:{
+		fontFamily:'FontAwesome'
+	}
+},
+
+".fontIcon[platform=android]":{
+	font:{
+		fontFamily:'fontawesome-webfont'
+	}
+}
+
+
+"#icon" : {
+    width: '50dp', height: '50dp', left: 0
+},
+"#title" : {
+    color: 'black',
+    font: { fontFamily:'Arial', fontSize: '20dp', fontWeight:'bold' },
+    left: '60dp', top: 0
+},
+"#subtitle" : {
+    color: 'gray',
+    font: { fontFamily:'Arial', fontSize: '14dp' },
+    left: '60dp', top: '25dp'
+}
+
+"SearchBar": {
+	height: "43dp", 
+	top: 0, 
+	barColor: "#444", 
+	showCancel: true
+}

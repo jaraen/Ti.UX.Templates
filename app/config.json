@@ -1,0 +1,38 @@
+{
+	"global": {
+		"appName":"Ti UX Library",
+		"theme":"default"
+	}, 
+	"env:development": {}, 
+	"env:test": {}, 
+	"env:production": {}, 
+	"os:android": {},
+	"os:blackberry": {},
+	"os:ios": {
+		"fontBold":"Avenir-Heavy",
+		"fontNormal":"Avenir-Light",
+		"fontLight":"Avenir-Light"
+	},
+	"os:mobileweb": {},
+	"dependencies": {
+        "com.criteriastudio.RemoteImageView": "1.0",
+        "ti.ux.title": "1.0",
+        "ti.ux.alignview": "1.0",
+        "ti.ux.iconfont": "1.0",
+        "ti.ux.iconlabel": "1.0",
+        "ti.ux.iconvalue": "1.0",
+        "ti.ux.iconbutton": "1.0",
+        "ti.ux.image": "1.0",  
+        "ti.ux.spacer": "1.0",
+        "ti.ux.expandabletext":"1.0",
+        "ti.ux.scrollableview":"1.0",
+        "ti.ux.pagingcontrol":"1.0",
+        "ti.ux.rowitem":"1.0",
+        "ti.ux.forms.row.optionspicker":"1.0",
+        "ti.ux.forms.row.switch":"1.0",
+        "ti.ux.forms.row.text":"1.0",
+        "ti.ux.forms.text":"1.0",
+        "ti.ux.forms.scrollableform":"1.0"
+
+     }
+}

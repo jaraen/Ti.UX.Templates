@@ -1,0 +1,8 @@
+<Alloy>
+	<View class="view-iconvalue">
+		<Widget src="ti.ux.iconfont" id="icon" class="icon-iconvalue"></Widget>
+		<Label class="label-iconvalue" id="label"/>
+	</View>
+</Alloy>
+
+

@@ -1,0 +1,17 @@
+"#view":{
+    top:0,
+    height:'54dp',
+    backgroundColor:Alloy.CFG.barColor,
+},
+ "#img":{
+     top:'5dp',
+
+     height:'40dp',
+     image:'/images/headerLogo.png'
+ },
+"#line":{
+  bottom:0,
+  height:'2dp',
+  backgroundColor:'#6000'
+}
+

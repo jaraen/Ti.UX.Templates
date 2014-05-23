@@ -1,0 +1,5 @@
+<Alloy>
+	<ScrollView id="view" onClick="blurField" >
+		
+	</ScrollView>
+</Alloy>

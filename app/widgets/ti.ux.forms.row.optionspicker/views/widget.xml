@@ -1,0 +1,30 @@
+<Alloy>
+	<TableViewRow class="tableviewrow-form-row"  id="row" onClick="openPicker">
+		
+		<Widget src="ti.ux.iconfont" id="icon" left="10" size="20"></Widget>
+		
+		<Label class="label-row-title" id="titleLbl" />
+		
+		<Label class="label-row-subtitle" id="subtitleLbl" />
+		
+		<Label class="label-row-count" id="countLbl"  />
+
+		<Widget src="ti.ux.iconfont" class="fa-row-haschild" />
+		
+		<View class="view-row-separator" />
+		
+	</TableViewRow>
+	
+	<OptionDialog id="dialog" onClick="optionSelected">
+
+            <!-- The ButtonNames tag sets the Android-only buttonNames property. -->
+            <!--ButtonNames>
+                <ButtonName>Help</ButtonName>
+            </ButtonNames-->
+
+            <!-- Add a View for the androidView property here. -->
+
+    </OptionDialog>
+</Alloy>
+
+

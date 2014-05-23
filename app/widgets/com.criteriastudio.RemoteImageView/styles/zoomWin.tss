@@ -1,0 +1,21 @@
+"#win":{
+	backgroundColor:"transparent",
+	navBarHidden:true
+},
+"#img[platform=ios]":{
+	width:'100%'
+},
+"#img[platform=android]":{
+	canScale:true,
+	enableZoomControls:true,
+	top:0, bottom:0, left:0, right:0
+},
+"#scroll":{
+	opacity:0,
+	backgroundColor:'#000',
+	contentHeight:'auto',
+	contentWidth:'auto',
+	maxZoomScale:10,
+	minZoomScale:1
+}
+

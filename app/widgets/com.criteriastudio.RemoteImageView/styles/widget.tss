@@ -1,0 +1,8 @@
+"#imgContainer":{
+	width:Ti.UI.SIZE,
+	height:Ti.UI.SIZE
+},
+"#img[platform=android]":{
+	height:Ti.UI.SIZE
+}
+

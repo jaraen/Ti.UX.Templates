@@ -1,0 +1,13 @@
+{
+	"id": "ti.ux.rowitem",
+	"name": "ti.ux.rowitem",
+	"description" : "an extended tableviewrow",
+	"author": "Javier Rayon",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2014",
+	"license":"Public Domain",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"3.1",
+	"tags":"",
+	"platforms":"android,ios"
+}
