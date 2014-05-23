@@ -78,6 +78,8 @@ a library of ready-to-use components that you can reuse.</p>
 
 <p>It uses several custom widgets ready to reuse and support for <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome icons</a></p>
 
+<p><img src="https://raw.githubusercontent.com/jaraen/Ti.UX.Templates/master/screenshots/widgets%20franky%201.png" alt="Franky Template: a detail view"><img src="https://raw.githubusercontent.com/jaraen/Ti.UX.Templates/master/screenshots/widgets%20franky%202.png" alt="Franky Template: a detail view"></p>
+
 <h3>
 <a name="settings-form-a-template-for-modifying-and-input-data" class="anchor" href="#settings-form-a-template-for-modifying-and-input-data"><span class="octicon octicon-link"></span></a>Settings form: a template for modifying and input data</h3>
 
@@ -86,8 +88,10 @@ including data validation, option pickers and so on.</p>
 
 <p>This template will boost the process of creating new forms and will do it super easy to edit and maintain.</p>
 
+<p><img src="https://raw.githubusercontent.com/jaraen/Ti.UX.Templates/master/screenshots/widgets%20form%20settings.png" alt="Settings: A Form template"></p>
+
 <h3>
-<a name="sign-in--up-form-a-step-by-step-template" class="anchor" href="#sign-in--up-form-a-step-by-step-template"><span class="octicon octicon-link"></span></a>Sign in &amp; up form: a step-by-step template</h3>
+<a name="sign-up-form-a-step-by-step-form-template" class="anchor" href="#sign-up-form-a-step-by-step-form-template"><span class="octicon octicon-link"></span></a>Sign up form: a step-by-step form template</h3>
 
 <p>It is becoming more than usual that some input data processes, as for example sign up, buying process and so on, are made in a step-by-step way, 
 so the user is more comfortable and not swamped by a large quantity of data to fill in.</p>
@@ -96,6 +100,8 @@ so the user is more comfortable and not swamped by a large quantity of data to f
 
 <p>By now, only text fields are supported, with several validation methods, support for custom validation methods, synchronous and asynchronous validation and
 invalid data detection.</p>
+
+<p><img src="https://raw.githubusercontent.com/jaraen/Ti.UX.Templates/master/screenshots/widgets%20form%20signup.png" alt="Sign up form: a step-by-step form template"></p>
 
 <h3>
 <a name="list-a-template-full-of-interaction-samples" class="anchor" href="#list-a-template-full-of-interaction-samples"><span class="octicon octicon-link"></span></a>List: a template full of interaction samples</h3>
@@ -115,18 +121,27 @@ invalid data detection.</p>
 <p>Features:</p>
 
 <ul>
-<li>manages its own cache</li>
-<li>shows a loading indicator witha progress indicator when its loading a remote picture</li>
+<li>manages its own local cache</li>
+<li>shows a loading indicator with progress while loads a remote picture</li>
 <li>set zoomable property to true open a new window with a zoomable fullscreen image, showing an small loupe icon</li>
+<li>Support for retina images after saving in cache</li>
+<li>Also works with local images</li>
 </ul><h3>
-<a name="tiuximage" class="anchor" href="#tiuximage"><span class="octicon octicon-link"></span></a>ti.ux.image</h3>
+<a name="tiuxalignview" class="anchor" href="#tiuxalignview"><span class="octicon octicon-link"></span></a>ti.ux.alignview</h3>
 
-<p>this component envelopes com.criteriastudio.RemoteImageView widget for easier management.</p>
+<p>Distributes horizontally all children elements added in its creation.</p>
+
+<p>If no <code>width</code> is set, it takes the parent width. You can set <code>width</code> property if the view is smaller than the parent or if the parent view is a 
+scrollView where you want to align all the elements.</p>
 
 <h3>
-<a name="comjrayontitle" class="anchor" href="#comjrayontitle"><span class="octicon octicon-link"></span></a>com.jrayon.title</h3>
+<a name="tiuximage" class="anchor" href="#tiuximage"><span class="octicon octicon-link"></span></a>ti.ux.image</h3>
 
-<p>A title label styling class <code>H1</code></p>
+<p>this component envelopes com.criteriastudio.RemoteImageView widget for easier management.
+Also adds vertical parallax FX to it.</p>
+
+<p>Use <code>innerMargin</code> to set the limits of the parallax fx. Use <code>realTop</code> property indicating the real from the window top edge. This is required to correctly manage
+the scroll event by the parent container (tipically a table view or a scrollview)</p>
 
 <h3>
 <a name="tiuxexpandabletext" class="anchor" href="#tiuxexpandabletext"><span class="octicon octicon-link"></span></a>ti.ux.expandabletext</h3>
@@ -136,6 +151,43 @@ invalid data detection.</p>
 <p><code>height</code> </p>
 
 <p>Uses style <code>paragraph</code> </p>
+
+<h3>
+<a name="tiuxformsrowoptionspicker" class="anchor" href="#tiuxformsrowoptionspicker"><span class="octicon octicon-link"></span></a>ti.ux.forms.row.optionspicker</h3>
+
+<p>Extends TableViewRow to be used in a settings form. Clicking on it, opens a selector of options.</p>
+
+<p>Properties:</p>
+
+<p><code>title</code>: Title to show in the row
+<code>options</code> : array of string with the options to show to the user
+<code>type</code>: Type of dialog to show. optionsdialog | popup | modalwindow //now only optionsdialog works
+<code>value</code>: index of the selected value by default
+<code>cancel</code>: cancel option index in <code>options</code> (optional)</p>
+
+<h3>
+<a name="tiuxformsrowswitch" class="anchor" href="#tiuxformsrowswitch"><span class="octicon octicon-link"></span></a>ti.ux.forms.row.switch</h3>
+
+<p>Extends TableViewRow to be used in a settings form. Adds a switch and a title to the row</p>
+
+<p>Properties:</p>
+
+<p><code>title</code>: Title to show in the row
+<code>value</code> : true | false Default value for the switch</p>
+
+<h3>
+<a name="tiuxformsrowtext" class="anchor" href="#tiuxformsrowtext"><span class="octicon octicon-link"></span></a>ti.ux.forms.row.text</h3>
+
+<p>Extends TableViewRow to be used in a settings form. Adds a text field to the form</p>
+
+<p>Properties:</p>
+
+<p><code>title</code>
+<code>hintText</code>
+<code>type</code>
+<code>value</code></p>
+
+<p>In development: support for different validation methods and keyboards just setting the type property</p>
 
 <h3>
 <a name="tiuxformsscrollableform" class="anchor" href="#tiuxformsscrollableform"><span class="octicon octicon-link"></span></a>ti.ux.forms.scrollableform</h3>
@@ -261,7 +313,7 @@ activityIndicator is shown during the validation.</p>
 <h3>
 <a name="tiuxformstext" class="anchor" href="#tiuxformstext"><span class="octicon octicon-link"></span></a>ti.ux.forms.text</h3>
 
-<p>A boxed label and textfield with validation methods. </p>
+<p>A boxed label and textfield with validation methods. Includes a titles above the textfield.</p>
 
 <h3>
 <a name="tiuxiconbutton" class="anchor" href="#tiuxiconbutton"><span class="octicon octicon-link"></span></a>ti.ux.iconbutton</h3>
@@ -315,15 +367,47 @@ activityIndicator is shown during the validation.</p>
 <span class="p">}</span>
 </pre></div>
 
+<p>This is an example of pagingControl styling:</p>
+
+<pre><code>".view-pagingcontrol":{
+    height:"10",
+//  backgroundColor:"#fff",
+    zIndex: "999",
+    width: Ti.UI.SIZE
+},
+".view-pagingcontrol-dot":{
+    height:4,
+    width:4,
+    borderRadius:2
+},
+".view-pagingcontrol-dot-active":{
+    backgroundColor:"#000"
+}
+".view-pagingcontrol-dot-inactive":{
+    backgroundColor:"#999"
+}
+
+</code></pre>
+
 <h3>
 <a name="tiuxrowitem" class="anchor" href="#tiuxrowitem"><span class="octicon octicon-link"></span></a>ti.ux.rowitem</h3>
 
 <p>A <code>TableViewRow</code> widget, that accepts <code>title</code>, <code>subtitle</code> and <code>count</code> properties.</p>
 
 <h3>
+<a name="tiuxscrollableview" class="anchor" href="#tiuxscrollableview"><span class="octicon octicon-link"></span></a>ti.ux.scrollableview</h3>
+
+<p>A Titanium ScrollableView with customizable pagingControl through alloy styles. </p>
+
+<h3>
 <a name="tiuxspacer" class="anchor" href="#tiuxspacer"><span class="octicon octicon-link"></span></a>ti.ux.spacer</h3>
 
 <p>A white space widget to leave blank spaces between rows or components. </p>
+
+<h3>
+<a name="tiuxtitle" class="anchor" href="#tiuxtitle"><span class="octicon octicon-link"></span></a>ti.ux.title</h3>
+
+<p>A title label styling class <code>label-H1</code></p>
 
 <h2>
 <a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h2>
