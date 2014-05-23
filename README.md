@@ -344,7 +344,7 @@ This is an example of pagingControl styling:
 	backgroundColor:"#999"
 }
 
-``
+```
 
 
 ### ti.ux.rowitem
