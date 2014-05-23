@@ -114,6 +114,7 @@ exports.downloadImage = function(args) {
 
 
 //Applies a style to a component
+//TODO: rewrite to use WidgetTools.setTiProps
 exports.applyProperties = function( _component, _style) {
 	var _style = _style || {};
 	_component = mixin(_component, _style);

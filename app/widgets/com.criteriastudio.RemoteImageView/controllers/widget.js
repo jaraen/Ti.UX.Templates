@@ -4,30 +4,6 @@ var Scope = require(WPATH('scope'));
 var args0 = arguments[0] || {};
 
 
-exports.addEventListener = function(eventName, callback){
-	if(OS_IOS){
-		$.img.addEventListener(eventName, callback);
-	}else{
-		$.imgContainer.addEventListener(eventName, callback);	
-	}
-};
-
-exports.removeEventListener = function(eventName, callback){
-	if(OS_IOS){
-		$.img.removeEventListener(eventName, callback);
-	}else{
-		$.imgContainer.removeEventListener(eventName, callback);	
-	}
-};
-
-exports.setZoomable = function(value) {
-	$.img.addEventListener('click', function(e){
-		if($.img.image){
-			var win = Alloy.createWidget('com.criteriastudio.RemoteImageView', 'zoomWin', {image:$.img.cacheFilePath}).getView();
-			win.open();
-		}
-	});
-}
 
 exports.init = function(args){
 	
@@ -47,12 +23,10 @@ exports.init = function(args){
 
 	var codedFilename = Ti.Utils.md5HexDigest(image);
 	
-	
 	if(Titanium.Platform.displayCaps.density === 'high'){
 		codedFilename += '@2x';
 	}
 
-	
 	var cachePath = Scope.TI_CACHE_DIR + codedFilename;
 
     var file = Ti.Filesystem.getFile(Scope.TI_CACHE_DIR, codedFilename);
@@ -101,7 +75,6 @@ exports.init = function(args){
 
 function applyImageProperties(props){
 	
-//        $.img.applyProperties(args);
 	if(OS_IOS){
 		Scope.applyProperties($.img, props);
 	}
@@ -110,5 +83,30 @@ function applyImageProperties(props){
 	}
 }
 
+
+exports.addEventListener = function(eventName, callback){
+	if(OS_IOS){
+		$.img.addEventListener(eventName, callback);
+	}else{
+		$.imgContainer.addEventListener(eventName, callback);	
+	}
+};
+
+exports.removeEventListener = function(eventName, callback){
+	if(OS_IOS){
+		$.img.removeEventListener(eventName, callback);
+	}else{
+		$.imgContainer.removeEventListener(eventName, callback);	
+	}
+};
+
+exports.setZoomable = function(value) {
+	$.img.addEventListener('click', function(e){
+		if($.img.image){
+			var win = Alloy.createWidget('com.criteriastudio.RemoteImageView', 'zoomWin', {image:$.img.cacheFilePath}).getView();
+			win.open();
+		}
+	});
+}
 
 if(args0.image) exports.init(args0); 
