@@ -41,6 +41,8 @@ a library of ready-to-use components that you can reuse.
 
 It uses several custom widgets ready to reuse and support for [FontAwesome icons](http://fortawesome.github.io/Font-Awesome/)
 
+![Franky Template: a detail view](https://raw.githubusercontent.com/jaraen/Ti.UX.Templates/master/screenshots/widgets%20franky%201.png)
+![Franky Template: a detail view](https://raw.githubusercontent.com/jaraen/Ti.UX.Templates/master/screenshots/widgets%20franky%202.png)
 
 ### Settings form: a template for modifying and input data
 
@@ -49,7 +51,9 @@ including data validation, option pickers and so on.
 
 This template will boost the process of creating new forms and will do it super easy to edit and maintain.
 
-### Sign in & up form: a step-by-step template
+![Settings: A Form template](https://raw.githubusercontent.com/jaraen/Ti.UX.Templates/master/screenshots/widgets%20form%20settings.png)
+
+### Sign up form: a step-by-step form template
 
 It is becoming more than usual that some input data processes, as for example sign up, buying process and so on, are made in a step-by-step way, 
 so the user is more comfortable and not swamped by a large quantity of data to fill in.
@@ -58,6 +62,8 @@ This example adds all the needed logic to create the step-by-step navigation and
 
 By now, only text fields are supported, with several validation methods, support for custom validation methods, synchronous and asynchronous validation and
 invalid data detection.
+
+![Sign up form: a step-by-step form template](https://raw.githubusercontent.com/jaraen/Ti.UX.Templates/master/screenshots/widgets%20form%20signup.png)
 
 ### List: a template full of interaction samples
 
@@ -73,17 +79,28 @@ An image view that downloads and automatically manages its own cache. Also works
 It also adds properties to the image, doing it `zoomable`, it is, click for view fullscreen and pinch in for zoomin.
 
 Features:
- - manages its own cache
- - shows a loading indicator witha progress indicator when its loading a remote picture
+ - manages its own local cache
+ - shows a loading indicator with progress while loads a remote picture
  - set zoomable property to true open a new window with a zoomable fullscreen image, showing an small loupe icon
- 
+ - Support for retina images after saving in cache
+ - Also works with local images
+
+### ti.ux.alignview
+
+Distributes horizontally all children elements added in its creation.
+
+If no `width` is set, it takes the parent width. You can set `width` property if the view is smaller than the parent or if the parent view is a 
+scrollView where you want to align all the elements.
+
+
 ### ti.ux.image
 
 this component envelopes com.criteriastudio.RemoteImageView widget for easier management.
+Also adds vertical parallax FX to it.
 
-### com.jrayon.title
+Use `innerMargin` to set the limits of the parallax fx. Use `realTop` property indicating the real from the window top edge. This is required to correctly manage
+the scroll event by the parent container (tipically a table view or a scrollview)
 
-A title label styling class `H1`
 
 ### ti.ux.expandabletext
 
@@ -92,6 +109,43 @@ A clickable label that expands its size. Properties accepted:
  `height` 
 
 Uses style `paragraph` 
+
+### ti.ux.forms.row.optionspicker
+
+Extends TableViewRow to be used in a settings form. Clicking on it, opens a selector of options.
+
+Properties:
+
+`title`: Title to show in the row
+`options` : array of string with the options to show to the user
+`type`: Type of dialog to show. optionsdialog | popup | modalwindow	//now only optionsdialog works
+`value`: index of the selected value by default
+`cancel`: cancel option index in `options` (optional)
+
+
+### ti.ux.forms.row.switch
+
+Extends TableViewRow to be used in a settings form. Adds a switch and a title to the row
+
+Properties:
+
+`title`: Title to show in the row
+`value` : true | false Default value for the switch
+
+
+### ti.ux.forms.row.text
+
+Extends TableViewRow to be used in a settings form. Adds a text field to the form
+
+Properties:
+
+`title`
+`hintText`
+`type`
+`value`
+
+In development: support for different validation methods and keyboards just setting the type property
+
 
 ### ti.ux.forms.scrollableform
 
@@ -218,7 +272,7 @@ Have a look to lib/validators.js to see a few examples of validators.
 
 ### ti.ux.forms.text
 
-A boxed label and textfield with validation methods. 
+A boxed label and textfield with validation methods. Includes a titles above the textfield.
 
 ### ti.ux.iconbutton
 
@@ -269,15 +323,47 @@ function updatePagingControl(e){
 }
 ```
 
+This is an example of pagingControl styling:
+
+```
+".view-pagingcontrol":{
+	height:"10",
+//	backgroundColor:"#fff",
+	zIndex: "999",
+	width: Ti.UI.SIZE
+},
+".view-pagingcontrol-dot":{
+	height:4,
+	width:4,
+	borderRadius:2
+},
+".view-pagingcontrol-dot-active":{
+	backgroundColor:"#000"
+}
+".view-pagingcontrol-dot-inactive":{
+	backgroundColor:"#999"
+}
+
+``
+
 
 ### ti.ux.rowitem
 
 A `TableViewRow` widget, that accepts `title`, `subtitle` and `count` properties.
 
+
+### ti.ux.scrollableview
+
+A Titanium ScrollableView with customizable pagingControl through alloy styles. 
+
 ### ti.ux.spacer
  
 A white space widget to leave blank spaces between rows or components. 
- 
+
+### ti.ux.title
+
+A title label styling class `label-H1`
+
 ## Credits
 
 Dreamed up by Sonia Villanueva and Javier Rayon in 2014.
