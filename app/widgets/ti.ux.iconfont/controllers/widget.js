@@ -2,11 +2,10 @@
 var args = arguments[0] || {};
 var WTools = require('WidgetTools');
 
-var fontawesome = require(WPATH('IconicFont')).IconicFont({
-	font: WPATH('FontAwesome'),
-	ligature: false	// optional
-});
-
+var IconicFont = require(WPATH('IconicFont')),
+	fontawesome = new IconicFont({
+		font: WPATH('FontAwesome')
+	});
 
 function initUI(){
 
@@ -17,10 +16,9 @@ function initUI(){
 	WTools.cleanArgs(args);
 }
 
-
 //returns the whole map of charcodes
 $.getCharMap = function(){
-	return fontawesome.getCharMap() || {};
+	return fontawesome.font.charcode || {};
 };
 
 $.setIcon = function(codename){
@@ -31,7 +29,7 @@ $.init = function(argsInit){
 
 	$.iconLbl.font = {
 		fontSize: args.size || 24,
-		fontFamily: fontawesome.fontfamily()
+		fontFamily: fontawesome.fontfamily
 	};
 
 	if(argsInit.iconColor) $.iconLbl.color = args.iconColor;
@@ -43,4 +41,3 @@ $.init = function(argsInit){
 
 
 initUI();
-
