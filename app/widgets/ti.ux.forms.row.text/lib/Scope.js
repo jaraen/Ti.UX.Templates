@@ -37,6 +37,7 @@ exports.setupField = function (args){
 	var type = params.inputType || "text";
 	Ti.API.info('set type ' + type);
 	
+	control.value = params.value || '';
 	
 	//setup keyboard and default validators
 	if(type == "text"){
@@ -56,6 +57,8 @@ exports.setupField = function (args){
 		
 	}else if(type == "url"){
 		setTypeUrl(control);
+	}else if(type == "textarea"){
+		setTypeTextArea (control);
 	}
 	
 	if(params.validate) control.validate = params.validate;		//overwrite with custom validate method if it has defined
@@ -72,6 +75,28 @@ exports.setupField = function (args){
 function setTypeText(control){
 	control.validate = validators.defaultValidator;
 	control.autocorrect = false;
+}
+
+function setTypeTextArea(control){
+	control.validate = validators.defaultValidator;
+	control.autocorrect = true;
+	
+	control.addEventListener('focus', function(){	//show a modal window to input data to the textarea
+		Ti.API.info('focus textarea ' + control.value);
+		control.blur();
+		var win = Alloy.createWidget('ti.ux.forms.row.text', 'TextAreaWin', {value:control.value}).getView();
+		
+		win.open({modal:true});
+		
+		win.addEventListener('save', function(e){
+			control.value = e.value;
+		});
+		
+		win.addEventListener('cancel', function(e){
+			Ti.API.info('textarea editing cancelled');
+		});
+		
+	});
 }
 
 function setTypePassword(control){

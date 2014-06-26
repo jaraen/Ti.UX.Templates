@@ -17,14 +17,9 @@
 	
 	<OptionDialog id="dialog" onClick="optionSelected">
 
-            <!-- The ButtonNames tag sets the Android-only buttonNames property. -->
-            <!--ButtonNames>
-                <ButtonName>Help</ButtonName>
-            </ButtonNames-->
-
-            <!-- Add a View for the androidView property here. -->
-
     </OptionDialog>
+    
+    
 </Alloy>
 
 

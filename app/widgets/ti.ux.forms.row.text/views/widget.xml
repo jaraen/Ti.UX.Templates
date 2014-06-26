@@ -5,9 +5,14 @@
 		
 		<Label class="label-row-title" id="titleLbl" />
 
-		<TextField class="textfield-row-control" id="field" />
+		<TextField class="textfield-row-control" id="field" onBlur="validate" onFocus="hideValidationError"/>
+		
+		<ActivityIndicator id="actInd" class="activityindicator-forms-text"/>
+
+		<Widget src="ti.ux.iconfont" id="alertIcon" right="10" icon="fa-exclamation-triangle" iconColor="#900"  zIndex="99" />
 		
 		<View class="view-row-separator" />
+		
 	</TableViewRow>
 </Alloy>
 

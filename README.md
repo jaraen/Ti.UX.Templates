@@ -25,8 +25,8 @@ Find more info about ux mobile patterns in our website [www.uxmobilepatterns.com
 
 ##Multiplatform Support
 
-The project has been developed and fully works on iPhone. Although the UX has been designed with iPhone users in mind, most components also work on android
-and our intention is to give full support to get the templates and widgets working in both platforms.
+The project has been developed for and fully works on iPhone. Although the UX has been designed with iPhone users in mind, most components also work on android
+and our intention is to give full support to the templates and widgets working in both platforms.
 
 
 ## Templates
@@ -76,7 +76,7 @@ coming soon...
 
 An image view that downloads and automatically manages its own cache. Also works with local images.
 
-It also adds properties to the image, doing it `zoomable`, it is, click for view fullscreen and pinch in for zoomin.
+It also adds properties to the image, doing it `zoomable`, it is, click for view fullscreen and pinch for zoomin.
 
 Features:
  - manages its own local cache
@@ -89,17 +89,8 @@ Features:
 
 Distributes horizontally all children elements added in its creation.
 
-If no `width` is set, it takes the parent width. You can set `width` property if the view is smaller than the parent or if the parent view is a 
+If no `width` property is set, it takes the parent width. You can set `width` property if the view is smaller than the parent or if the parent view is a 
 scrollView where you want to align all the elements.
-
-
-### ti.ux.image
-
-this component envelopes com.criteriastudio.RemoteImageView widget for easier management.
-Also adds vertical parallax FX to it.
-
-Use `innerMargin` to set the limits of the parallax fx. Use `realTop` property indicating the real from the window top edge. This is required to correctly manage
-the scroll event by the parent container (tipically a table view or a scrollview)
 
 
 ### ti.ux.expandabletext
@@ -110,6 +101,15 @@ A clickable label that expands its size. Properties accepted:
 
 Uses style `paragraph` 
 
+### ti.ux.image
+
+this component envelopes com.criteriastudio.RemoteImageView widget for easier management.
+Also adds vertical parallax FX to it.
+
+Use `innerMargin` to set the limits of the parallax fx. Use `realTop` property indicating the real from the window top edge. This is required to correctly manage
+the scroll event by the parent container (tipically a table view or a scrollview)
+
+
 ### ti.ux.forms.row.optionspicker
 
 Extends TableViewRow to be used in a settings form. Clicking on it, opens a selector of options.
@@ -118,7 +118,7 @@ Properties:
 
 `title`: Title to show in the row
 `options` : array of string with the options to show to the user
-`type`: Type of dialog to show. optionsdialog | popup | modalwindow	//now only optionsdialog works
+`type`: Type of dialog to show. optionsdialog | popup | modalwindow	//modal window not implemented yet
 `value`: index of the selected value by default
 `cancel`: cancel option index in `options` (optional)
 
@@ -141,10 +141,29 @@ Properties:
 
 `title`
 `hintText`
-`type`
+`type`: text|email|url|number|textarea
 `value`
 
-In development: support for different validation methods and keyboards just setting the type property
+If `textarea` is used in `type` property, a modal window opens with a big text area when the control receives the focus.
+
+Email, url, number and so on uses their own validators and customizes the keyboard
+
+
+### ti.ux.forms.row.timepicker
+
+Extends TableViewRow to be used in a settings form. Shows a datepicker.
+
+Properties:
+
+`title`
+`value`
+`minDate`
+`maxDate`
+`format`: format used in the value field
+
+If `textarea` is used in `type` property, a modal window opens with a big text area when the control receives the focus.
+
+Email, url, number and so on uses their own validators and customizes the keyboard
 
 
 ### ti.ux.forms.scrollableform
@@ -272,15 +291,25 @@ Have a look to lib/validators.js to see a few examples of validators.
 
 ### ti.ux.forms.text
 
-A boxed label and textfield with validation methods. Includes a titles above the textfield.
+A boxed label and textfield with validation methods. Includes a title above the textfield. Thought to be used in scrollable step-by-step forms.
 
 ### ti.ux.iconbutton
 
 A button that accepts [FontAwesome 4.1.0 codes](http://fortawesome.github.io/Font-Awesome/icons/). Fully customizable.
 
+Properties:
+
+`icon`
+`size`
+`iconColor`
+
 ### ti.ux.iconfont
 
 A label that accepts [FontAwesome 4.1.0 codes](http://fortawesome.github.io/Font-Awesome/icons/) codes
+
+`icon` the font awesome icon code
+`iconColor`
+`size`
 
 ### ti.ux.iconlabel
 
@@ -308,7 +337,7 @@ The widget can be declared in Alloy in the xml view file, but must be initialize
 
 ```
 
-Then, in the controller
+In the controller
 
 ```javascript
 /* SCROLLABLE VIEW FUNCTIONS */
@@ -346,10 +375,59 @@ This is an example of pagingControl styling:
 
 ```
 
+Note that the pagingControl can be in or outside the scrollable control.
 
 ### ti.ux.rowitem
 
 A `TableViewRow` widget, that accepts `title`, `subtitle` and `count` properties.
+
+### ti.ux.popup
+
+A customizable fullscreen popup window, to add any content to it.
+
+use `closeButton` to show a cross button in the top right corner of the content. The popup also can be dismissed touching the background.
+
+```xml
+<Widget src="ti.ux.popup" id="mapPopup" platform="ios" closeButton="true">
+    <Module id="mapview" module="ti.map" method="createView" />
+</Widget>
+```
+
+to show the popup
+
+```javascript
+	$.mapPopup.show();
+```
+
+
+### ti.ux.popup.list
+
+
+![ti.ux.popup.list widget](https://raw.githubusercontent.com/jaraen/Ti.UX.Templates/master/screenshots/ti.ux.popup.list.png)
+
+A customizable fullscreen popup list to show a closed list of options.
+
+`closeButton` shows a cross button in the top right corner
+`selectable`  determines if the items in the list are selectable (use false for showing a list of items)
+`options`  array of strings, each element is an item in the list
+`value`		selected item in the list (only if selectable is true)
+
+You can define the popup in the alloy view or inside the controler in runtime. 
+
+This example shows how to declare a selectable list and retrieve the selected option
+
+```javascript
+	$.OPTIONS = ['bike', 'car', 'canoa' , 'plane', 'wings'];
+	
+	var popupDialog = Alloy.createWidget('ti.ux.popup.list', 'widget', {closeButton:false, selectable:true, options:$.OPTIONS, value:2});
+
+	popupDialog.getView('table').addEventListener('click', function(e){
+		Ti.API.info('optionSelected ' + e.index + ', name: ' + e.row.data.title);
+		popupDialog.hide();
+	});
+	
+	popupDialog.getView().show();
+```
 
 
 ### ti.ux.scrollableview

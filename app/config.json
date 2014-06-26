@@ -11,7 +11,8 @@
 	"os:ios": {
 		"fontBold":"Avenir-Heavy",
 		"fontNormal":"Avenir-Light",
-		"fontLight":"Avenir-Light"
+		"fontLight":"Avenir-Light",
+		"fontItalic":"Avenir-LightOblique"
 	},
 	"os:mobileweb": {},
 	"dependencies": {
@@ -27,10 +28,14 @@
         "ti.ux.expandabletext":"1.0",
         "ti.ux.scrollableview":"1.0",
         "ti.ux.pagingcontrol":"1.0",
+        "ti.ux.popup":"1.0",
+        "ti.ux.popup.list":"1.0",
         "ti.ux.rowitem":"1.0",
+        "ti.ux.stickyview":"1.0",
         "ti.ux.forms.row.optionspicker":"1.0",
         "ti.ux.forms.row.switch":"1.0",
         "ti.ux.forms.row.text":"1.0",
+        "ti.ux.forms.row.timepicker":"1.0",
         "ti.ux.forms.text":"1.0",
         "ti.ux.forms.scrollableform":"1.0"
 

@@ -8,7 +8,7 @@ WTools.setTiProps(args, $.widget);
 function initUI(){
 	$.setText(args.text);
 	$.setIcon(args.icon);
-	if(args.color) $.setColor(args.color);
+	if(args.color || args.iconColor) $.setColor(args.color || args.iconColor);
 }
 
 $.setText = function(str){

@@ -1,0 +1,167 @@
+<!--
+  The Titanium UX Template Library
+  http://www.uxmobilepatterns.com
+  
+  Franky: a detail content template
+  
+-->
+
+<Alloy>
+	<Window title="I Am Franky" onOpen="initUI">
+		<!--Widget src="ti.ux.stickyview" height="35" id="stickyView" backgroundColor="#eef" top="0" zIndex="999">
+			<ButtonBar id="bb1" platform="ios" backgroundColor="#369" top="5" height="25" width="200">
+	            <Labels>	        
+	                <Label>One</Label>
+	                <Label>Two</Label>
+	                <Label>Three</Label>
+	            </Labels>
+	        </ButtonBar>
+		</Widget-->
+		<TableView onScroll="updateScrolls" id="mainTable">
+			<TableViewSection>
+				<TableViewRow><Widget src="ti.ux.spacer" height="15"/></TableViewRow>
+				<TableViewRow height="Ti.UI.SIZE"><Widget src="ti.ux.title" text="The Most Beatiful Template in the World"></Widget></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.spacer" height="8"/></TableViewRow>
+				<TableViewRow>
+					
+					<Widget src="ti.ux.image" id="img" 
+						left="0"
+						right="0"
+						zoomable="true"
+						height="150"
+						innerMargin="80"
+						realTop="40"
+						image1="/images/bleins.jpg"
+						image="https://evbdn.eventbrite.com/s3-s3/eventlogos/49070160/amsterdam.jpg">
+					</Widget>
+					
+				</TableViewRow>
+				
+				<TableViewRow><Widget src="ti.ux.spacer" height="10"/></TableViewRow>
+				
+				<TableViewRow><Widget src="ti.ux.iconlabel" text="Saturday, 28th Jun 2014 at 2 pm" icon="fa-clock-o" left="10" height="30" color="#666"/></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.iconlabel" text="Tobacco Theater, Nes 75, Amsterdam" icon="fa-globe" left="10" height="30" color="#669" id="locationLabel"/></TableViewRow>
+				
+				<TableViewRow><Widget src="ti.ux.spacer" height="10"/></TableViewRow>
+				
+				<TableViewRow class="tableviewrow-scrollableview">
+					
+					<Widget src="ti.ux.scrollableview" class="detailview-scrollableview" id="scrollableView" platform="ios">
+						<Widget src="ti.ux.alignview"  height="Ti.UI.SIZE">
+							<Widget src="ti.ux.iconvalue" text="15" icon="fa-comments-o"/>
+							<Widget src="ti.ux.iconvalue" text="30" icon="fa-star-o"/>
+							<Widget src="ti.ux.iconvalue" text="27º" icon="fa-sun-o" />
+							<Widget src="ti.ux.iconvalue" text="470 km" icon="fa-map-marker"/>
+							<Widget src="ti.ux.iconvalue" text="150" icon="fa-users"/>
+						</Widget>
+						<Widget src="ti.ux.alignview"  height="Ti.UI.SIZE">
+							<Widget src="ti.ux.iconbutton" icon="fa-camera-retro" id="photoBtn"/>
+							<Widget src="ti.ux.iconbutton" icon="fa-phone" />
+							<Widget src="ti.ux.iconbutton" icon="fa-envelope" />
+							<Widget src="ti.ux.iconbutton" icon="fa-heart" />
+							<Widget src="ti.ux.iconbutton" icon="fa-trash-o" />
+						</Widget>
+						<Label>Put more options here</Label>
+					</Widget>
+				</TableViewRow>
+				
+				<TableViewRow><Widget src="ti.ux.spacer" height="1" backgroundColor="#999"/></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>
+				
+			</TableViewSection>			
+			
+			<TableViewSection>
+					
+				<FooterView>
+					<Button class="actionButton" title="Book this place" />
+				</FooterView>
+					
+	
+				<TableViewRow><Widget src="ti.ux.expandabletext" height="80" id="descriptionLabel"/></TableViewRow>
+				
+				
+				<TableViewRow><Widget src="ti.ux.spacer" height="4" /></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.spacer" height="1" backgroundColor="#aaa"/></TableViewRow>
+
+				<TableViewRow backgroundColor="#fff"><Label class="label-H5" top="5">Invite your friends and share this content</Label></TableViewRow>
+				<TableViewRow height="60" backgroundColor="#fff">
+					<ScrollableView>
+						<Widget src="ti.ux.alignview"  height="Ti.UI.SIZE">
+							<Widget src="ti.ux.iconbutton" icon="fa-facebook-square" size="35" />
+							<Widget src="ti.ux.iconbutton" icon="fa-twitter-square" size="35"/>
+							<Widget src="ti.ux.iconbutton" icon="fa-pinterest-square" size="35"/>
+							<Widget src="ti.ux.iconbutton" icon="fa-tumblr-square" size="35"/>
+						</Widget>
+						<Widget src="ti.ux.alignview"  height="Ti.UI.SIZE">
+							<Widget src="ti.ux.iconbutton" icon="fa-behance-square" size="35"/>
+							<Widget src="ti.ux.iconbutton" icon="fa-linkedin-square" size="35"/>
+							<Widget src="ti.ux.iconbutton" icon="fa-reddit-square" size="35"/>							
+							<Widget src="ti.ux.iconbutton" icon="fa-envelope-square" size="35"/>
+						</Widget>
+					</ScrollableView>
+				</TableViewRow>
+				
+				<TableViewRow><Widget src="ti.ux.spacer" height="1" backgroundColor="#aaa"/></TableViewRow>
+				
+				<Widget src="ti.ux.rowitem" title="Photos" count="9" hasChildren="true" id="photosRow" onClick="showGallery"/>
+				<Widget src="ti.ux.rowitem" title="Hotels" count="20" hasChildren="true"/>
+				<Widget src="ti.ux.rowitem" title="Atractions" count="10" hasChildren="true"/>
+				<Widget src="ti.ux.rowitem" title="Bedrooms" count="2" />
+				<Widget src="ti.ux.rowitem" title="Bathrooms" count="1" />
+				<Widget src="ti.ux.rowitem" title="Material" subtitle="100% cotton" / >
+				
+	
+				<TableViewRow>
+					<View height="120">
+						<Label textAlign="center" top="15" class="H2">Services</Label>
+						<ScrollView top="20">
+							<Widget src="ti.ux.alignview"  height="Ti.UI.SIZE" width="640">
+								<Widget src="ti.ux.iconvalue" icon="fa-phone" class="serviceIcon"/>
+								<Widget src="ti.ux.iconvalue" icon="fa-credit-card" class="serviceIcon"/>
+								<Widget src="ti.ux.iconvalue" icon="fa-coffee" class="serviceIcon" />
+								<Widget src="ti.ux.iconvalue" icon="fa-beer" class="serviceIcon" />
+								<Widget src="ti.ux.iconvalue" icon="fa-taxi" class="serviceIcon" />
+		
+								<Widget src="ti.ux.iconvalue" icon="fa-coffee" class="serviceIcon" />
+								<Widget src="ti.ux.iconvalue" icon="fa-suitcase" class="serviceIcon" />
+								<Widget src="ti.ux.iconvalue" icon="fa-space-shuttle" class="serviceIcon" />
+								<Widget src="ti.ux.iconvalue" icon="fa-life-ring" class="serviceIcon" />
+								<Widget src="ti.ux.iconvalue" icon="fa-flask" class="serviceIcon" />
+								<Widget src="ti.ux.iconvalue" icon="fa-wheelchair" class="serviceIcon" />
+							</Widget>
+						</ScrollView>
+						<Button class="linkLabel" color="#99f" textAlign="center" bottom="3" onClick="showPopupServices">See more</Button>
+					</View>
+				</TableViewRow>
+				
+				<TableViewRow height="120" platform="ios">
+			        <Module id="mapview" module="ti.map" method="createView" touchEnabled="false">  </Module>					
+				</TableViewRow>
+				
+				<TableViewRow><Widget src="ti.ux.spacer" height="40"/></TableViewRow>
+				
+			</TableViewSection>
+		</TableView>
+		
+	</Window>
+	
+		<!-- HIDDEN POPUPS -->
+		<Widget src="ti.ux.popup" animation="" id="mapPopup" platform="ios" closeButton="true">
+	        <Module id="mapview" module="ti.map" method="createView" />
+		</Widget>
+
+		<Widget src="ti.ux.popup.list" animation="" id="servicesPopup" platform="ios" closeButton="true">
+				<Widget src="ti.ux.rowitem" icon="fa-phone" title="Phone"/>
+				<Widget src="ti.ux.rowitem" icon="fa-credit-card" title="Pay with Credit Card"/>
+				<Widget src="ti.ux.rowitem" icon="fa-coffee" title="Free Coffee" />
+				<Widget src="ti.ux.rowitem" icon="fa-beer" title="Free Beer (Slurp!)" />
+				<Widget src="ti.ux.rowitem" icon="fa-taxi" title="Taxi Service" />
+				<Widget src="ti.ux.rowitem" icon="fa-coffee" title="More Coffee" />
+				<Widget src="ti.ux.rowitem" icon="fa-suitcase" title="Luggage Room" />
+				<Widget src="ti.ux.rowitem" icon="fa-space-shuttle" title="Launch Station" />
+				<Widget src="ti.ux.rowitem" icon="fa-life-ring" title="Close to the Channel" />
+				<Widget src="ti.ux.rowitem" icon="fa-flask" title="Custom Lab" />
+				<Widget src="ti.ux.rowitem" icon="fa-wheelchair" title="Wheelchair Service" />
+		</Widget>
+</Alloy>
+

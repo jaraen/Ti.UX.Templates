@@ -27,7 +27,7 @@ function drawChildren(children){
 		
 		// fix: https://jira.appcelerator.org/browse/TC-3583 (thx, fokke!)
 		if (!children[i]) {
-			return;
+			continue;
 		}
 		
 		views.push(children[i]);
@@ -62,10 +62,10 @@ function sortChildren(){
 	var distance = (w / views.length);
 	
 	//we want to distribute horizontally all elements based on their vertical center axis
-	for(var i = 0; i < views.length; i++){
+	for(var i = 0, j = views.length; i < j; i++){
 		
 		views[i].left = distance * (i + factor) - views[i].rect.width / 2 - distance / 2;
-//		Ti.API.info('width element ' + views[i].rect.width + ' w ' + w + ' distance: ' + distance + ' final left: ' + views[i].left);
+		Ti.API.info('width element ' + views[i].rect.width + ' w ' + w + ' distance: ' + distance + ' final left: ' + views[i].left);
 		
 	}
 

@@ -6,8 +6,10 @@ WTools.setTiProps(args, $.scrollable);
 
 $.scrollable.disableBounce = args.disableBounce;
 
-if (args.children) {
-	$.scrollable.views = args.children;
+if(OS_IOS){ //todo: review android version
+	if (args.children) {
+		$.scrollable.views = args.children; 
+	}
 }
 
 //WTools.cleanArgs(args);

@@ -1,0 +1,457 @@
+
+"Window":{
+	backgroundColor:"#10171f"
+},
+
+"Window[platform=ios]":{
+	barColor: '#10171f',
+	navTintColor:'#fff',
+	tintColor:'#fff',
+	translucent:false,
+},
+
+"NavigationWindow[platform=ios]":{
+	//barImage:Alloy.CFG.barImage,
+	tintColor:'#fff',
+	includeOpaqueBars:true,
+    extendEdges:[Ti.UI.EXTEND_NONE],
+    translucent: true,
+    statusBarStyle: Titanium.UI.iPhone.StatusBar.OPAQUE_BLACK
+},
+
+"Label":{
+	font:{fontFamily: Alloy.CFG.normalFont, fontSize:'14dp'},
+	color:'#fff'
+},
+
+"TableView":{
+	backgroundColor:'#000'
+},
+
+"TableViewRow":{
+	backgroundColor:'#333',
+	color:'#fff'
+},
+"ListView":{
+	backgroundColor:'transparent'
+},
+
+"ListViewItem":{
+	backgroundColor:'#333'
+},
+
+"ActivityIndicator":{
+	height:Ti.UI.FILL,
+	width:Ti.UI.FILL,
+	color:'#fff',
+	font:{
+		fontFamily:Alloy.CFG.boldFont,
+		fontSize:'12dp',
+		fontWeight:'bold'
+	},
+	zIndex:999
+},
+"ActivityIndicator[platform=ios]":{
+ 	style:Ti.UI.iPhone.ActivityIndicatorStyle.PLAIN
+ },
+
+"ActivityIndicator[platform=android]":{
+	style:Titanium.UI.ActivityIndicatorStyle.PLAIN
+},
+
+
+
+"TextArea":{
+	height: '60dp',
+	left:'10dp',
+	right:'10dp',
+  	backgroundColor: '#fff',
+  	suppressReturn:false,
+  	font: {fontFamily: Alloy.CFG.normalFont, fontSize:'16dp' },
+	color:'#333',
+	borderWidth : 2,
+	borderColor : "#999",	
+	borderRadius : 6,	
+},
+
+"TextField":{
+	height : '40dp',
+	left:'10dp',
+	right:'10dp',
+	font:{
+		fontFamily: Alloy.CFG.boldFont,
+		fontSize:'16dp'
+	},
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	clearButtonMode: Ti.UI.INPUT_BUTTONMODE_ONFOCUS,
+	color:'#fff',
+	backgroundColor:'#99EF4141',
+	// borderWidth : 2,
+	// borderColor : "#666",
+	borderRadius : 3,
+},
+
+"Picker[platform=android]":{
+	left:'10dp',
+	right:'10dp'
+}
+
+
+/*********NEW STYLES ******************/
+/**********************************************************************************************************************************/
+/**********************************************************************************************************************************/
+
+".view-row-separator":{
+	height:0.5,
+	backgroundColor:'#EF4141',
+	bottom:0
+},
+
+".view-height-fit":{
+	 height:Ti.UI.SIZE
+},
+
+".view-height-width-fit":{
+	 height:Ti.UI.SIZE,
+	 width:Ti.UI.SIZE
+},
+".view-width-height-fit":{
+	 height:Ti.UI.SIZE,
+	 width:Ti.UI.SIZE
+},
+
+".tableviewrow-form-row":{
+	height: "50",
+	backgroundColor: "#251c23"
+},
+".tableviewrow-rowitem":{
+	height: "50",
+	backgroundColor: "#251c23"
+},
+
+".label-paragraph":{
+	left:5,
+	right:5,
+	font:{
+		fontFamily:Alloy.CFG.fontNormal
+	}
+},
+".label-row-title":{
+	left:35	,
+	color:'#fff'
+},
+".label-row-subtitle":{
+	textAlign:"right",
+	right:"35",
+	color:"#aaa"
+},
+".label-row-count":{
+	backgroundColor: "#999",
+	color: "#000",
+	textAlign: "center",
+	borderRadius: "8",
+	height: "20",
+	visible: "false",
+	right: "35"
+},
+
+".label-H1":{
+	left:'10dp',right:'10dp',
+	color:'#fff',
+	font:{
+		fontFamily: Alloy.CFG.fontNormal,
+		fontSize:'22dp'
+	},
+	textAlign:'left',
+    height:Ti.UI.SIZE
+},
+
+".label-H2":{
+    color:'#fff',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:'14dp',
+		fontWeight:'bold'
+	}
+},
+
+".label-H3":{
+    color:'#fff',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:'14dp',
+		fontWeight:'bold'
+	}
+},
+".label-H4":{
+    color:'#fff',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:'12dp',
+		fontWeight:'bold'
+	}
+},
+".label-H5":{
+    color:'#fff',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:'10dp',
+		fontWeight:'bold'
+	}
+},
+
+".label-paragraph":{
+	left:'10dp',right:'10dp',
+    color:'#fff',
+    verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+	font: {
+		fontFamily: Alloy.CFG.normalFont,
+		fontSize:'12dp'
+	}
+},
+
+
+".button-linkButton":{
+    left:'20dp',
+    right:'20dp',
+    height:'30dp',
+    backgroundColor: '#99EF4141',
+    color:'#EF4141',
+    selectedColor:'#333',
+    backgroundImage:'none',
+	borderRadius:'5dp',
+	borderColor:'#EF4141',
+	borderWidth:'1dp',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:'16dp',
+		fontWeight:'bold'
+    }
+},
+
+".fa-row-haschild":{
+	right: "10",
+	icon: "fa-angle-right",
+	iconColor:'#fff'
+},
+".fa-row-icon":{
+	left:10,
+	size:24,
+	iconColor:'#ddd'
+},
+".textfield-row-control":{
+	height : '40dp',
+	left:'10dp',
+	right:'10dp',
+	font:{
+		fontFamily: Alloy.CFG.boldFont,
+		fontSize:'16dp'
+	},
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+	color:'#fff',
+	backgroundColor:'#99EF4141'
+
+},
+
+".view-headerview-form":{
+	backgroundColor:"#d333", 
+	height:"35dp"
+},
+
+".label-tableviewsection-header":{
+	left:"10", 
+	color:"#ff",
+	shadowColor:'#000',
+	shadowOffset:{x:0.5, y:0.5},
+	font:{
+		fontFamily:Alloy.CFG.fontNormal,
+		fontSize:16
+	}
+},
+
+/*ti.ux.forms.text*/
+
+".view-forms-text-container":{
+	left: 20,
+	right: 20,
+	top: 20,
+	height: "100dp",
+	borderColor: "#EF4141",
+	borderWidth: "1",
+	backgroundColor: "#99EF4141",
+},
+
+".label-forms-text-title":{
+	top: "5",
+	left: "10"  ,
+	color: "#EF4141",
+	height:40,
+	font:{
+		fontFamily: Alloy.CFG.fontLight,
+		fontSize:24
+	}
+},
+
+".view-forms-text-separator":{
+	height: "1",
+	left: "10",
+	right: "10",
+	backgroundColor: "#EF4141"
+},
+
+".label-forms-text-tiptext":{
+	top:130,
+	color:'#eee',
+	font:{
+		fontFamily: Alloy.CFG.fontNormal,
+		fontSize:12
+	}
+},
+
+
+".label-forms-text-errortext":{
+	top:'130dp',
+	color:'#EF4141',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:12
+	}
+}
+".image-forms-text-alert":{
+	top:14,
+	right:15,
+	height:26,
+	width: 28,
+	visible:false,
+	image:WPATH('warning.png')
+},
+
+".activityindicator-forms-text":{
+	right:10,
+	top:10,
+	width:30,
+	height:30,
+	message:'',
+	backgroundColor:'transparent'
+},
+
+".textfield-forms-text":{
+	bottom:5,
+	borderWidth:0,
+	font:{
+		fontFamily:Alloy.CFG.fontNormal,
+		fontSize:18
+	}
+},
+
+".textfield-forms-text[platform=ios]":{
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+	clearButtonMode: Ti.UI.INPUT_BUTTONMODE_ONFOCUS,
+	suppressReturn:true,
+}
+
+".textfield-forms-text[platform=android]":{
+	backgroundColor:'#99EF4141'
+}
+
+/* ti.ux.iconlabel */
+
+".icon-iconlabel":{
+	left:5,
+	size: 20,
+	textAlign:'left'
+},
+
+".label-iconlabel":{
+	left:"30",
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:14
+	},
+	textAlign:'left'
+}
+
+
+/* ti.ux.iconvalue */
+
+".view-iconvalue":{
+	top:5,
+	height:'50',
+	width:'80'
+	
+}
+
+".icon-iconvalue":{
+	top: 0,
+	size: 24,
+	textAlign:'center'
+}
+
+".label-iconvalue":{
+	bottom:3,
+	textAlign:'center',
+	font:{
+		fontFamily:Alloy.CFG.fontBold,
+		fontSize:10
+	}
+}
+
+/*ti.ux.pagingcontrol*/
+
+".view-pagingcontrol":{
+	height:"10",
+	backgroundColor:"#222",
+	zIndex: "999",
+	width: Ti.UI.SIZE
+},
+".view-pagingcontrol-dot":{
+	height:4,
+	width:4,
+	borderRadius:2
+},
+".view-pagingcontrol-dot-active":{
+	backgroundColor:"#fff"
+}
+".view-pagingcontrol-dot-inactive":{
+	backgroundColor:"#666"
+},
+
+
+/***
+ * TEMPLATE SPECIFIC STYLES 
+ * 
+ */
+
+
+/**
+ * 	FRANKY
+ */
+
+".tableviewrow-scrollableview":{
+	backgroundColor:"#222"
+}
+
+".detailview-scrollableview":{
+	height:"60",
+	top:"10",
+	backgroundColor:"#222",
+	disableBounce:true
+},
+
+
+
+".actionButton":{
+	backgroundColor:"#99EF4141",
+	color:'#fff',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:14
+	},
+	left:"5",
+	right:"5",
+	bottom:'3',
+	borderRadius:3,
+	borderColor:"#EF4141",
+	height:"50" 
+}
+

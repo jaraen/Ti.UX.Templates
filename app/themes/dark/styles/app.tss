@@ -440,3 +440,15 @@
 
 
 
+,
+".actionButton":{
+	backgroundColor:"#B399",
+	color:'#fff',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:14
+	},
+	left:"0",
+	right:"0",
+	height:"50" 
+}

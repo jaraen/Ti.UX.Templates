@@ -1,16 +1,38 @@
 <!--
-  The Titanium UX Template Library
-  http://www.uxmobilepatterns.com
+The Titanium UX Template Library
+http://www.uxmobilepatterns.com
 -->
 <Alloy>
 	<TableView onClick="openItem" id="tableView">
-		<TableViewRow title="Article Detail Complete" controller="templates/DetailSample1" hasChild="true"></TableViewRow>
-		<TableViewRow title="Sign up sample" controller="templates/Signup" hasChild="true"></TableViewRow>
 
-		<TableViewRow title="Settings" controller="templates/Settings" hasChild="true"></TableViewRow>
-		<TableViewRow><Widget src="ti.ux.spacer"></Widget></TableViewRow>
-		<TableViewRow title="Font Awesome charcodes" controller="templates/IconFonts" hasChild="true"></TableViewRow>
+		<TableViewSection>
+			<HeaderView>
+				<View class="view-headerview-form">
+					<Label class="label-tableviewsection-header" text="UX TEMPLATES"/>
+					<View class="view-row-separator" />
+				</View>
+			</HeaderView>
+			<TableViewRow title="Franky" controller="templates/Franky" hasChild="true"></TableViewRow>
+			<TableViewRow title="Sign up sample" controller="templates/Signup" hasChild="true"></TableViewRow>
+			<TableViewRow title="Settings" controller="templates/Settings" hasChild="true"></TableViewRow>
+			
+			<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>
+		</TableViewSection>
 		
+		<TableViewSection>
+			<HeaderView>
+				<View class="view-headerview-form">
+					<Label class="label-tableviewsection-header" text="MISCELLANEOUS"/>
+					<View class="view-row-separator" />
+				</View>
+			</HeaderView>
+			<TableViewRow title="A Franky Variation" controller="templates/Franky2" hasChild="true"></TableViewRow>
+			<TableViewRow title="Font Awesome charcodes" controller="templates/IconFonts" hasChild="true"></TableViewRow>
+			<TableViewRow title="All settings form components" controller="templates/FormDemo" hasChild="true"></TableViewRow>
+			
+			
+		</TableViewSection>
+
 	</TableView>
 </Alloy>
 

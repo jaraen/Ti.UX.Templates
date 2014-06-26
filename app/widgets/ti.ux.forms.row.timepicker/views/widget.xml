@@ -1,0 +1,20 @@
+<Alloy>
+	<TableViewRow class="tableviewrow-form-row"  id="row" onClick="toggleRow" >
+
+		<View height="50" top="0">
+			<Widget src="ti.ux.iconfont" class="fa-row-icon" id="icon" ></Widget>
+			<Label class="label-row-title" id="titleLbl" left="35" />
+			<Label class="label-row-date" id="dateLbl" textAlign="right" right="20"/>
+		</View>
+
+		
+		<Picker id="picker"
+			top="40"
+	          onChange="updateLabels"
+	          type="Ti.UI.PICKER_TYPE_DATE_AND_TIME">
+        </Picker>
+		<View class="view-row-separator" />
+	</TableViewRow>
+</Alloy>
+
+

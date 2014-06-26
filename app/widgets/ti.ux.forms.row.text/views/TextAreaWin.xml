@@ -1,0 +1,23 @@
+<Alloy>
+	<NavigationWindow platform="ios"  id="win">
+		<Window onOpen="init" backgroundColor="#fff">
+			<LeftNavButton>
+				<Button title="Save" onClick="save" />
+			</LeftNavButton>
+			<RightNavButton>
+				<Button title="Cancel" onClick="cancel" />
+			</RightNavButton>
+
+			<View>
+				<TextArea id="textarea" top="2" left="2" right="2" height="240"></TextArea>
+			</View>
+		</Window>		
+	</NavigationWindow>
+
+	<Window id="win" platform="android">
+		<View>
+			<TextArea id="textarea" top="5" left="5" right="5" height="240"></TextArea>
+		</View>
+	</Window>
+
+</Alloy>

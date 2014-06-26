@@ -9,7 +9,8 @@
 
 <Alloy>
 	<Window title="Using Font Awesome" id="window" backgroundColor="#fff" onOpen="loadSymbols">
-		<TableView id="tableView" filterAttribute="codename">
+		
+		<TableView id="tableView" filterAttribute="codename" >
 			<SearchBar/>
 		</TableView>
 	</Window>

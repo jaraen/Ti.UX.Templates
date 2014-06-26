@@ -1,0 +1,7 @@
+<Alloy>
+	<Widget src="ti.ux.popup" id="popup">
+		<TableView id="table" class="tableview-popuplist" ></TableView>
+	</Widget>
+</Alloy>
+
+

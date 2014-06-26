@@ -1,6 +1,6 @@
 var args = arguments[0];
 
-var TYPE_OPTION_DIALOG = 'optiondialog',
+var TYPE_OPTION_DIALOG = 'dialog',
 	TYPE_POPUP = 'popup',
 	TYPE_MODALWINDOW = 'modalwindow';
 
@@ -35,7 +35,7 @@ function initValues(){
 
 	var value = args.value;
 	
-	Ti.API.info('allValues: ' + JSON.stringify(allValues) + ' ' + value);	
+	//Ti.API.info('allValues: ' + JSON.stringify(args) + ' ' + value);	
 	
 	if(typeof value !== 'undefined' && value !== -1 && value !== "-1"){
 
@@ -58,17 +58,27 @@ function initValues(){
 function openPicker(e){
 	
 	//use OPTION DIALOG as default selector
-	var value = (value || TYPE_OPTION_DIALOG).toLowerCase();
+	var type = (args.dialogType || TYPE_OPTION_DIALOG).toLowerCase();
 	
-	if(value === TYPE_OPTION_DIALOG){
-		Ti.API.info('ti.ux.forms.optionspicker: option dialog');
+	if(type === TYPE_OPTION_DIALOG){
+		//Ti.API.info('ti.ux.forms.optionspicker: option dialog');
 		$.dialog.options = $.OPTIONS;
 		if(args.cancel) $.dialog.cancel = args.cancel;
 		$.dialog.show();
-	}else if(value === TYPE_POPUP){
-		Ti.API.info('ti.ux.forms.optionspicker: popup');		
-		alert('popup not implemented yet');
-	}else if(value === TYPE_MODALWINDOW){
+	}else if(type === TYPE_POPUP){
+		//Ti.API.info('ti.ux.forms.optionspicker: popup');		
+		var popupDialog = Alloy.createWidget('ti.ux.popup.list', 'widget', {closeButton:false, selectable:true, options:$.OPTIONS, value:$.value});
+
+		popupDialog.getView('table').addEventListener('click', function(e){
+			//Ti.API.info('optionSelected ' + JSON.stringify(e));
+			$.value = e.index;
+			$.subtitleLbl.text = e.row.data.title;
+			popupDialog.hide();
+		});
+		
+		popupDialog.getView().show();
+		
+	}else if(type === TYPE_MODALWINDOW){
 		Ti.API.info('ti.ux.forms.optionspicker: modal window');
 		alert('modal window not implemented yet');
 	}
@@ -76,7 +86,7 @@ function openPicker(e){
 
 function optionSelected(e){
 	var index = e.index;
-	Ti.API.info('index: ' + index);
+
 	if(index === -1 || index == args.cancel) return;
 	
 	$.value = index;

@@ -20,4 +20,4 @@ function expandText(e){
 
 $.setText = function(str){
 	$.label.text = str || '';
-}
+};

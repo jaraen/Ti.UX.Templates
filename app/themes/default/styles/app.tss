@@ -29,7 +29,11 @@
 
 "TableViewRow":{
 	backgroundColor:'#eee',
-	height:Ti.UI.SIZE
+	height:Ti.UI.SIZE,
+	font:{
+		fontFamily:Alloy.CFG.fontNormal,
+		fontSize:16
+	}
 },
 "ListView":{
 	backgroundColor:'transparent'
@@ -157,9 +161,8 @@
 	left:'10dp',right:'10dp',
 	color:'#333',
 	font:{
-		fontFamily: Alloy.CFG.fontBold,
-		fontSize:'18dp',
-		fontWeight:'bold'
+		fontFamily: Alloy.CFG.fontNormal,
+		fontSize:'22dp'
 	},
 	textAlign:'left',
     height:Ti.UI.SIZE
@@ -193,9 +196,8 @@
 ".label-H5":{
     color:'#333',
 	font:{
-		fontFamily: Alloy.CFG.fontBold,
-		fontSize:'10dp',
-		fontWeight:'bold'
+		fontFamily: Alloy.CFG.fontItalic,
+		fontSize:'10dp'
 	}
 },
 
@@ -301,7 +303,7 @@
 	color:'#666',
 	font:{
 		fontFamily: Alloy.CFG.fontNormal,
-		fontSize:10
+		fontSize:12
 	}
 },
 
@@ -311,7 +313,7 @@
 	color:'#f00',
 	font:{
 		fontFamily: Alloy.CFG.fontBold,
-		fontSize:10
+		fontSize:12
 	}
 }
 ".image-forms-text-alert":{
@@ -433,3 +435,16 @@
 	disableBounce:"true"
 }
 
+
+,
+".actionButton":{
+	backgroundColor:"#B399",
+	color:'#fff',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:14
+	},
+	left:"0",
+	right:"0",
+	height:"50" 
+}

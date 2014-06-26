@@ -20,7 +20,7 @@ function loadSymbols(){
 //unfortunately, does not perform as well as the Listview
 function Row(codename){
 	
-	var icon = Alloy.createWidget('ti.ux.iconfont', 'widget', {icon:codename, left:10, color:'#009'}).getView();
+	var icon = Alloy.createWidget('ti.ux.iconfont', 'widget', {icon:codename, left:30, size:30, color:'#00a'}).getView();
 	
 	var lbl = Ti.UI.createLabel({
 		text:codename,

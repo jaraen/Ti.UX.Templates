@@ -26,9 +26,10 @@ function openItem(e){
 
 function openWorkingItem(){
 	$.tableView.removeEventListener('postLayout', openWorkingItem);
-	//openItem({row:{controller:'templates/DetailSample1'}});	
+	openItem({row:{controller:'templates/Franky'}});	
 }
 
 //$.tableView.addEventListener('postlayout', openWorkingItem);
 
-setTimeout(openWorkingItem, 300);
+//just for testing, opens the item automatically
+//setTimeout(openWorkingItem, 300);

@@ -1,5 +1,6 @@
 var args = arguments[0];
 var Scope = require(WPATH('Scope'));
+var Animations = require('alloy/animation');
 
 var CUSTOM_PROPS = [
 	"title",
@@ -23,15 +24,20 @@ function initUI(){
 	$.titleLbl.text = args.title || '';
 	$.field.hintText = args.hintText || '';
 	$.field.value = args.value || '';
-
+	$.alertIcon.getView().opacity = 0;
+	
 	Scope.setupField({params:args, control:$.field});
 }
 
 function showValidationError(){
+	var icon = $.alertIcon.getView();
+	Animations.fadeIn(icon);
 	Animations.shake($.field, 200);
 }
 
 function hideValidationError(){
+	var icon = $.alertIcon.getView();
+	Animations.fadeOut(icon);
 
 }
 
@@ -39,20 +45,20 @@ function focus(e){
 	$.field.focus();
 }
 
-
+function validate(e){
+	$.validate();
+}
 
 //Public methods. These methods should exist in every ti.ux.forms component
 
 $.validate = function(callback){
-	
-	if(!callback) return;
-	
+		
 	hideValidationError();
 	
 	if($.field.validate.useCallback){
 		$.actInd.show();
 		$.field.validate($.field.value, function(e){
-			callback(e);
+			if(callback)callback(e);
 			if(!e){
 				showValidationError();
 			}
@@ -61,7 +67,7 @@ $.validate = function(callback){
 	}else{
 		var isValid = $.field.validate($.field.value);
 		Ti.API.info('isValid: ' + isValid);
-		callback(isValid);	
+		if(callback)callback(isValid);	
 		if(!isValid) showValidationError();
 	}
 };

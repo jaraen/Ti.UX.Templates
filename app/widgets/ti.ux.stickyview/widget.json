@@ -1,0 +1,13 @@
+{
+	"id": "ti.ux.stickyview",
+	"name": "ti.ux.stickyview",
+	"description" : "View to be used with a TableView or a ListView. It is shown when the user scrolls up and hidden when scrolls down.",
+	"author": "Javier Rayon",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2014",
+	"license":"Public Domain",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"3.1",
+	"tags":"",
+	"platforms":"android,ios"
+}

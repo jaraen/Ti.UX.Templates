@@ -1,0 +1,12 @@
+
+"TableView[platform=ios]":{
+	separatorStyle: Ti.UI.iPhone.TableViewSeparatorStyle.NONE
+},
+
+"TableViewRow":{	
+	height:Ti.UI.SIZE
+},
+
+"TableViewRow[platform=ios]":{
+	selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
+},

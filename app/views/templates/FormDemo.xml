@@ -1,0 +1,92 @@
+<!--
+  The Titanium UX Template Library
+  http://www.uxmobilepatterns.com
+  
+  Settings: a settings form template
+  
+-->
+
+
+<Alloy>
+	<Window title="Settings">
+		
+		
+		<TableView backgroundColor="#eee" class="tableview-form">
+			<TableViewSection>
+				<HeaderView>
+					<View class="view-headerview-form" >
+						<Label class="label-tableviewsection-header" text="TEXTFIELDS" />
+						<View class="view-row-separator" />
+					</View>
+				</HeaderView>
+
+				<Widget src="ti.ux.forms.row.text" inputType="text" title="" hintText="free text field" />
+
+				<Widget src="ti.ux.forms.row.text" inputType="email" title="" hintText="your@email.com" />
+
+				<Widget src="ti.ux.forms.row.text" inputType="url" title="" hintText="www.yourdomain.com" />				
+				
+				<Widget src="ti.ux.forms.row.text" inputType="textarea" title="" hintText="Textarea" />				
+				
+				<TableViewRow><View class="view-row-separator"/></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>
+				
+			</TableViewSection>			
+
+			<TableViewSection platform="ios">
+				<HeaderView>
+					<View class="view-headerview-form" >
+						<Label class="label-tableviewsection-header" text="DATE PICKERS" />
+						<View class="view-row-separator" />
+					</View>
+				</HeaderView>
+				
+				<Widget src="ti.ux.forms.row.timepicker" minDate="" maxDate="" value="" title="Start" icon="fa-repeat"/>
+				
+				<TableViewRow><View class="view-row-separator"/></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>
+				
+			</TableViewSection>		
+			<TableViewSection>
+				<HeaderView>
+					<View class="view-headerview-form" >
+						<Label class="label-tableviewsection-header" text="OPTION PICKERS" />
+						<View class="view-row-separator" />
+					</View>
+				</HeaderView>
+				
+				<Widget src="ti.ux.forms.row.optionspicker" title="Option Dialog" value="1" options="Never|Always|Each 15 minutes" icon="fa-repeat"/>
+				<Widget src="ti.ux.forms.row.optionspicker" title="Option Dialog + cancel" value="1" cancel="3" options="Never|Always|Each 15 minutes|Cancel" icon="fa-repeat"/>
+				<Widget src="ti.ux.forms.row.optionspicker" title="Using PopUp" value="1" options="Never|Always|Each 15 minutes" dialogType="popup" icon="fa-repeat"/>
+				<Widget src="ti.ux.forms.row.optionspicker" title="Chooser without icon" value="1" options="Never|Always|Each 15 minutes" dialogType="popup" />
+				
+				<TableViewRow><View class="view-row-separator"/></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>
+				
+			</TableViewSection>		
+				
+
+				
+			<TableViewSection>
+				<HeaderView>
+					<View class="view-headerview-form">
+						<Label class="label-tableviewsection-header" text="SWITCHES" />
+						<View class="view-row-separator" />
+					</View>
+				</HeaderView>
+				
+				<Widget src="ti.ux.forms.row.switch" title="This is a switch" value="true" />
+				<Widget src="ti.ux.forms.row.switch" title="This is another switch" value="false" />
+				<Widget src="ti.ux.forms.row.switch" title="Add location" value="false" icon="fa-map-marker"  />
+				<Widget src="ti.ux.forms.row.switch" title="Share in Facebook" value="true" icon="fa-facebook-square" iconColor="#66f"/>
+				<Widget src="ti.ux.forms.row.switch" title="Share in Twitter" value="true"  icon="fa-twitter-square"  iconColor="#66f" />
+				
+				<TableViewRow><View class="view-row-separator"/></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>
+			</TableViewSection>			
+				
+			
+		</TableView>
+	</Window>
+</Alloy>
+
