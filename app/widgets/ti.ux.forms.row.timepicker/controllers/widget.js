@@ -16,6 +16,7 @@ initValues();
 
 function initUI(){
 
+	$.picker.visible = false;
 	//not icon? move the title to the left
 	if(!args.icon){
 		$.titleLbl.left = $.icon.getView().left;
