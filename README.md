@@ -463,8 +463,11 @@ Orignal FontAwesome [Titanium module by Kosuke Isobe](https://github.com/k0sukey
 
 ## License
 
-All parts of this project are fully open source and is GPL friendly. You can use it for commercial projects, open source projects, 
-or really just about whatever you want.
+All parts of this project are fully open source and released under Apache license 2.0.
+
+You can use it for commercial projects, open source projects, or really just about whatever you want. 
+
+Code is provided as it is, no support or maitainance is guaranteed.
 
 Attribution is not required, but appreciated. Among anything else, we will love to know how this project may help you.
 
