@@ -197,7 +197,7 @@
     color:'#333',
 	font:{
 		fontFamily: Alloy.CFG.fontItalic,
-		fontSize:'10dp'
+		fontSize:'12dp'
 	}
 },
 
