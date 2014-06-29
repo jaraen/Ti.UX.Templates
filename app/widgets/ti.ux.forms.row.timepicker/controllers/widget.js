@@ -10,6 +10,7 @@ var CUSTOM_PROPS = [
 	"value",	//date in some format moment library can manage
 ];
 
+$.id = args.id || 'datePicker';
 
 initUI();
 initValues();

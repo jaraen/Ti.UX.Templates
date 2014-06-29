@@ -8,6 +8,7 @@ var CUSTOM_PROPS = [
 	"value",	//true|false
 ];
 
+$.id = args.id || 'none_id'; //not sure how to manage if id is not specified
 
 initUI();
 
@@ -84,7 +85,7 @@ $.getField = function(){
 	return $.field;
 };
 
-$.getFieldValue = function(){
+$.getValue = function(){
 	return $.field.value;
 };
 
