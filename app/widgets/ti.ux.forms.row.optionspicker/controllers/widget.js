@@ -12,6 +12,8 @@ var CUSTOM_PROPS = [
 	"value",	//Selected value, as index of the options array. Use -1 to not show any value by default (hintText will be shown instead)
 ];
 
+$.id = args.id || 'optionPicker';
+
 initUI();
 initValues();
 

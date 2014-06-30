@@ -8,7 +8,7 @@
 
 
 <Alloy>
-	<Window title="Settings">
+	<Window title="Settings" onClose="validateAndSave">
 		
 		
 		<TableView backgroundColor="#eee" class="tableview-form">
@@ -20,13 +20,13 @@
 					</View>
 				</HeaderView>
 
-				<Widget src="ti.ux.forms.row.text" inputType="text" title="" hintText="free text field" />
+				<Widget src="ti.ux.forms.row.text" inputType="text" title="" hintText="free text field" id="fieldText" />
 
-				<Widget src="ti.ux.forms.row.text" inputType="email" title="" hintText="your@email.com" />
+				<Widget src="ti.ux.forms.row.text" inputType="email" title="" hintText="your@email.com" id="fieldEmail" />
 
-				<Widget src="ti.ux.forms.row.text" inputType="url" title="" hintText="www.yourdomain.com" />				
+				<Widget src="ti.ux.forms.row.text" inputType="url" title="" hintText="www.yourdomain.com" id="fieldUrl" />				
 				
-				<Widget src="ti.ux.forms.row.text" inputType="textarea" title="" hintText="Textarea" />				
+				<Widget src="ti.ux.forms.row.text" inputType="textarea" title="" hintText="Textarea" id="fieldTextArea" />				
 				
 				<TableViewRow><View class="view-row-separator"/></TableViewRow>
 				<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>
@@ -41,7 +41,7 @@
 					</View>
 				</HeaderView>
 				
-				<Widget src="ti.ux.forms.row.timepicker" minDate="" maxDate="" value="" title="Start" icon="fa-repeat"/>
+				<Widget src="ti.ux.forms.row.timepicker" minDate="" maxDate="" value="" title="Start" icon="fa-repeat" id="fieldDate"/>
 				
 				<TableViewRow><View class="view-row-separator"/></TableViewRow>
 				<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>
@@ -55,7 +55,7 @@
 					</View>
 				</HeaderView>
 				
-				<Widget src="ti.ux.forms.row.optionspicker" title="Option Dialog" value="1" options="Never|Always|Each 15 minutes" icon="fa-repeat"/>
+				<Widget src="ti.ux.forms.row.optionspicker" title="Option Dialog" value="1" options="Never|Always|Each 15 minutes" icon="fa-repeat" id="fieldOption"/>
 				<Widget src="ti.ux.forms.row.optionspicker" title="Option Dialog + cancel" value="1" cancel="3" options="Never|Always|Each 15 minutes|Cancel" icon="fa-repeat"/>
 				<Widget src="ti.ux.forms.row.optionspicker" title="Using PopUp" value="1" options="Never|Always|Each 15 minutes" dialogType="popup" icon="fa-repeat"/>
 				<Widget src="ti.ux.forms.row.optionspicker" title="Chooser without icon" value="1" options="Never|Always|Each 15 minutes" dialogType="popup" />
@@ -75,7 +75,7 @@
 					</View>
 				</HeaderView>
 				
-				<Widget src="ti.ux.forms.row.switch" title="This is a switch" value="true" />
+				<Widget src="ti.ux.forms.row.switch" title="This is a switch" value="true" id="fieldSwitch"/>
 				<Widget src="ti.ux.forms.row.switch" title="This is another switch" value="false" />
 				<Widget src="ti.ux.forms.row.switch" title="Add location" value="false" icon="fa-map-marker"  />
 				<Widget src="ti.ux.forms.row.switch" title="Share in Facebook" value="true" icon="fa-facebook-square" iconColor="#66f"/>

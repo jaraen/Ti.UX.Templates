@@ -6,6 +6,7 @@ var CUSTOM_PROPS = [
 	"value",	//true|false
 ];
 
+$.id = args.id || 'switch';
 
 initUI();
 initValues();

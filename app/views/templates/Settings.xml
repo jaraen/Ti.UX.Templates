@@ -21,9 +21,9 @@
 				
 				<Widget src="ti.ux.forms.row.switch" title="All-day event" value="false" />
 				
-				<Widget src="ti.ux.forms.row.timepicker" minDate="" maxDate="" value="" title="Starts" icon="fa-clock-o"/>
+				<Widget src="ti.ux.forms.row.timepicker" minDate="" maxDate="" value="" title="Starts" icon="fa-clock-o" platform="ios"/>
 				
-				<Widget src="ti.ux.forms.row.timepicker" minDate="" maxDate="" value="" title="Ends" icon="fa-clock-o"/>
+				<Widget src="ti.ux.forms.row.timepicker" minDate="" maxDate="" value="" title="Ends" icon="fa-clock-o" platform="ios"/>
 				
 				<TableViewRow><View class="view-row-separator"/></TableViewRow>
 				
