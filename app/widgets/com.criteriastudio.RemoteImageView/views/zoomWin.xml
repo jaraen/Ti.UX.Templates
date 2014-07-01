@@ -5,7 +5,7 @@
 			<ImageView id="img"/>
 	    </ScrollView>
 
-        <ImageView id="img" platform="android">
+        <ImageView id="img" platform="android"/>
 
 	</Window>
 </Alloy>

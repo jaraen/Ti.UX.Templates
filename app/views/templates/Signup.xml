@@ -10,7 +10,7 @@
 <Alloy>
 	<Window backgroundColor="#f0f0f0" onOpen="initForm" fullscreen="true" navBarHidden="true" id="win">
 		<Widget src="ti.ux.forms.scrollableform" id="form"></Widget>
-		<Button id="cancelSignUp" title="Back to login" onClick="closeForm" bottom="0" backgroundColor="#3fff">
+		<Button id="cancelSignUp" title="Back to login" onClick="closeForm" bottom="0" backgroundColor="#3fff"/>
 	</Window>
 </Alloy>
 

@@ -1,0 +1,6 @@
+"Button": {
+	color: "#669"
+}
+"Button[platform=android]": {
+	backgroundColor: "none"
+}
