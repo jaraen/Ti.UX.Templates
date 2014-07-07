@@ -27,13 +27,14 @@ function initUI(){
 		
 	}
 	
+	var closeBtnView = $.closeBtn.getView();
 	if(args.closeButton){
-		$.closeBtn.visible = true;
-		$.closeBtn.getView().addEventListener('click', function(e){
+		closeBtnView.visible = true;
+		closeBtnView.addEventListener('click', function(e){
 			cancelPopup(e);
 		});
 	}else{
-		$.closeBtn.visible = false;
+		closeBtnView.visible = false;
 	}
 	
 }
