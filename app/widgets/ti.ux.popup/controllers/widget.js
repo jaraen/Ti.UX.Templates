@@ -20,14 +20,17 @@ function initUI(children, showCloseButton) {
                 size: 26,
                 iconColor: 'black'
             });
+        } catch (e) {
+            Ti.API.error("Add 'ti.ux.iconbutton' to use close button.");
+        }
+
+        if ($.closeBtn != null) {
             var closeBtnView = $.closeBtn.getView();
 
             var closeButtonStyle = $.createStyle({classes: 'close-button'});
             closeBtnView.applyProperties(closeButtonStyle);
 
             $.view.add(closeBtnView);
-        } catch (e) {
-            Ti.API.error("Add 'ti.ux.iconbutton' to use close button.");
         }
     }
 
