@@ -1,76 +1,62 @@
-var args = arguments[0];
-var WTools = require('WidgetTools');
-
 var animation = require('alloy/animation');
 
-//WTools.setTiProps(args, $.bgView);
 
-initUI();
+var args = arguments[0];
+var children = args.children || [];
+var showCloseButton = !!args.showCloseButton;
 
-function initUI(){
+initUI(children, showCloseButton);
 
-	var children;
 
-	if (args.children) {
-		
-		children = args.children|| [];
-		
-		if(OS_IOS){
-			$.container.add(children);
-		}
-		
-		if(OS_ANDROID){
-			for(var i = 0, j = children.length; i < j; i++){
-				$.container.add(children[i]);
-			}
-		}
-		
-	}
-	
-	var closeBtnView = $.closeBtn.getView();
-	if(args.closeButton){
-		closeBtnView.visible = true;
-		closeBtnView.addEventListener('click', function(e){
-			cancelPopup(e);
-		});
-	}else{
-		closeBtnView.visible = false;
-	}
-	
+function initUI(children, showCloseButton) {
+    children.map(function (child) {
+        $.container.add(child);
+    });
+
+    if (showCloseButton) {
+        try {
+            $.closeBtn = Alloy.createWidget('ti.ux.iconbutton', {
+                icon: 'fa-times-circle',
+                size: 26,
+                iconColor: 'black'
+            });
+            var closeBtnView = $.closeBtn.getView();
+
+            var closeButtonStyle = $.createStyle({classes: 'close-button'});
+            closeBtnView.applyProperties(closeButtonStyle);
+
+            $.view.add(closeBtnView);
+        } catch (e) {
+            Ti.API.error("Add 'ti.ux.iconbutton' to use close button.");
+        }
+    }
+
+    $.bgView.opacity = 0.0;
 }
 
-$.show = function(){
-	fadeIn();
+$.show = function () {
+    fadeIn();
 };
 
-$.hide = function(){
-	fadeOut();
+$.hide = function () {
+    fadeOut();
 };
 
-function cancelPopup(e){	
+function cancelPopup(e) {
+    var view = e.source;
+    if (view !== $.bgView && view !== $.closeBtn.getView())
+        return;
 
-	if(e.source !== $.bgView && e.source !== $.closeBtn.getView()) return;
-	
-	fadeOut();
+    $.hide();
 }
 
 function fadeIn() {
-	$.bgView.open();
-//	$.bgView.opacity = 0;
-	$.bgView.visible = true;
-	animation.fadeIn($.bgView, 300, function(e) {
-//		$.bgView.opacity = 1;
-	});
-
-};
+    $.bgView.open();
+    animation.fadeIn($.bgView, 300);
+}
 
 function fadeOut() {
-
-	animation.fadeOut($.bgView, 300, function(e) {
-		$.bgView.visible = false;
-			$.bgView.close();
-	});
-
-};
-
-//WTools.cleanArgs(args);
+    animation.fadeOut($.bgView, 300, function (e) {
+        $.bgView.close();
+    });
+}

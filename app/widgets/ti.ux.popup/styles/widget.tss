@@ -1,0 +1,25 @@
+'.view-popup-background': {
+    backgroundColor: '#9000'
+}
+
+'.view-popup-container': {
+    left: 20,
+    right: 20,
+    top: 50,
+    bottom: 50,
+    backgroundColor: 'white',
+    borderRadius: 5
+}
+
+'.container': {
+    top: 10,
+    bottom: 10,
+    left: 10,
+    right: 10
+}
+
+'.close-button': {
+    top: -4,
+    right: -2,
+    zIndex: 9999
+}

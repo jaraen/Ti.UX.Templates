@@ -69,7 +69,7 @@ function openPicker(e){
 		$.dialog.show();
 	}else if(type === TYPE_POPUP){
 		//Ti.API.info('ti.ux.forms.optionspicker: popup');		
-		var popupDialog = Alloy.createWidget('ti.ux.popup.list', 'widget', {closeButton:false, selectable:true, options:$.OPTIONS, value:$.value});
+		var popupDialog = Alloy.createWidget('ti.ux.popup.list', 'widget', {showCloseButton:false, selectable:true, options:$.OPTIONS, value:$.value});
 
 		popupDialog.getView('table').addEventListener('click', function(e){
 			//Ti.API.info('optionSelected ' + JSON.stringify(e));
