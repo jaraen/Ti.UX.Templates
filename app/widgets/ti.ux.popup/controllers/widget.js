@@ -44,8 +44,10 @@ $.hide = function () {
 
 function cancelPopup(e) {
     var view = e.source;
-    if (view !== $.bgView && view !== $.closeBtn.getView())
-        return;
+    if (
+        view !== $.bgView &&
+        ($.closeBtn == null || view !== $.closeBtn.getView())
+    ) return;
 
     $.hide();
 }
