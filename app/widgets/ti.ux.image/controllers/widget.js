@@ -49,7 +49,14 @@ $.updateScroll = function(e){
 	if(OS_IOS) $.imageView.top = $.imageView._top + (e.contentOffset.y - REAL_TOP) / 5;
 }
 
-
+exports.set = function(params){
+	
+	$.img.init(params);
+	
+	if(params.zoomable){
+	    $.img.setZoomable(true);
+	}
+}
 
 
 //alternative method for parallax fx
