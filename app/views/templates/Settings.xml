@@ -25,6 +25,8 @@
 				
 				<Widget src="ti.ux.forms.row.timepicker" minDate="" maxDate="" value="" title="Ends" icon="fa-clock-o" platform="ios"/>
 				
+				<Widget src="ti.ux.forms.row.timepicker" minDate="" maxDate="" value="" title="Date picker" icon="fa-calendar" pickerType="Ti.UI.PICKER_TYPE_DATE"/>
+				
 				<TableViewRow><View class="view-row-separator"/></TableViewRow>
 				
 			</TableViewSection>			

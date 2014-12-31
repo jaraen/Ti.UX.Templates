@@ -12,6 +12,8 @@ var CUSTOM_PROPS = [
 
 $.id = args.id || 'datePicker';
 
+$.picker.type = args.pickerType || Titanium.UI.PICKER_TYPE_DATE_AND_TIME;
+
 initUI();
 initValues();
 
@@ -70,8 +72,6 @@ function updateLabels(e){
 	
 	$.dateLbl.text = t.calendar();
 }
-
-
 
 
 
