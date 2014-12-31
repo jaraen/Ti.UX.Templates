@@ -1,7 +1,6 @@
 
  "#childrenImage":{
 	height:15, width:15,
-    image: WPATH("arrow.png") 
  },
 "#line":{
   bottom:0,

@@ -154,9 +154,6 @@
 	visible: "false",
 	right: "35"
 },
-"#childrenImage": {
-	right: 10
-},
 
 ".label-H1":{
 	left:'10dp',right:'10dp',
