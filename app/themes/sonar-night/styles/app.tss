@@ -239,6 +239,12 @@
 	size:24,
 	iconColor:'#ddd'
 },
+".switch-row-control": {
+	right: 10
+},
+".label-row-date": {
+	right: 20
+},
 ".textfield-row-control":{
 	height : '40dp',
 	left:'10dp',

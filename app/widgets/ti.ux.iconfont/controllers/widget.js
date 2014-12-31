@@ -38,6 +38,8 @@ $.init = function(argsInit){
 		$.iconLbl.text = fontawesome.icon(args.icon);
 	}
 };
-
+exports.hide = function (){
+	$.iconLbl.hide();
+};
 
 initUI();

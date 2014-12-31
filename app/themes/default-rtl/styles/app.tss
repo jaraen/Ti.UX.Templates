@@ -91,6 +91,7 @@
 	// borderWidth : 2,
 	// borderColor : "#666",
 	borderRadius : 3,
+	textAlign: 'right'
 },
 
 "Picker[platform=android]":{
@@ -140,11 +141,11 @@
 	}
 },
 ".label-row-title":{
-	left:35	
+	right: 35
 },
 ".label-row-subtitle":{
-	textAlign:"right",
-	right:"35",
+	textAlign:"left",
+	left:"35",
 	color:"#666"
 },
 ".label-row-count":{
@@ -154,7 +155,7 @@
 	borderRadius: "8",
 	height: "20",
 	visible: "false",
-	right: "35"
+	left: "35"
 },
 
 ".label-H1":{
@@ -164,8 +165,8 @@
 		fontFamily: Alloy.CFG.fontNormal,
 		fontSize:'22dp'
 	},
-	textAlign:'left',
-    height:Ti.UI.SIZE
+	textAlign:'right',
+	height:Ti.UI.SIZE
 },
 
 ".label-H2":{
@@ -208,7 +209,8 @@
 	font: {
 		fontFamily: Alloy.CFG.normalFont,
 		fontSize:'12dp'
-	}
+	},
+	textAlign: 'right'
 },
 
 
@@ -231,19 +233,19 @@
 },
 
 ".fa-row-haschild":{
-	right: "10",
-	icon: "fa-angle-right"
+	left: "10",
+	icon: "fa-angle-left"
 },
 ".fa-row-icon":{
-	left:10,
+	right:10,
 	size:24,
 	iconColor:'#333'
 },
 ".switch-row-control": {
-	right: 10
+	left: 10
 },
 ".label-row-date": {
-	right: 20
+	 left: 20
 },
 ".textfield-row-control":{
 	height : '40dp',
@@ -264,7 +266,7 @@
 },
 
 ".label-tableviewsection-header":{
-	left:"10", 
+	right:"10",
 	color:"#777",
 	shadowColor:'#fff',
 	shadowOffset:{x:0.5, y:0.5},
@@ -288,7 +290,7 @@
 
 ".label-forms-text-title":{
 	top: "5",
-	left: "10"  ,
+	right: "10"  ,
 	color: "#66c0ee",
 	height:40,
 	font:{
@@ -324,7 +326,7 @@
 }
 ".image-forms-text-alert":{
 	top:14,
-	right:15,
+	left:15,
 	height:26,
 	width: 28,
 	visible:false,
@@ -332,7 +334,7 @@
 },
 
 ".activityindicator-forms-text":{
-	right:10,
+	left:10,
 	top:10,
 	width:30,
 	height:30,
@@ -352,7 +354,7 @@
 ".textfield-forms-text[platform=ios]":{
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
 	clearButtonMode: Ti.UI.INPUT_BUTTONMODE_ONFOCUS,
-	suppressReturn:true,
+	suppressReturn:true
 }
 
 ".textfield-forms-text[platform=android]":{
@@ -362,18 +364,18 @@
 /* ti.ux.iconlabel */
 
 ".icon-iconlabel":{
-	left:5,
+	right:5,
 	size: 20,
-	textAlign:'left'
+	textAlign:'right'
 },
 
 ".label-iconlabel":{
-	left:"30",
+	right:"30",
 	font:{
 		fontFamily: Alloy.CFG.fontBold,
 		fontSize:14
 	},
-	textAlign:'left'
+	textAlign:'right'
 }
 
 

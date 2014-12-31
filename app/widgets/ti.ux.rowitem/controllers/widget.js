@@ -22,7 +22,9 @@ function initUI(){
 		});
 	}
 	
-	$.childrenImage.visible = args.hasChildren;
+	if (!args.hasChildren){
+		$.childrenImage.hide();
+	}
 	
 	if(OS_IOS && args.hasChildren){
 		$.row.selectionStyle = Ti.UI.iPhone.TableViewCellSelectionStyle.BLUE;
