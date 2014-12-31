@@ -154,6 +154,9 @@
 	visible: "false",
 	right: "35"
 },
+"#childrenImage": {
+	right: 10
+},
 
 ".label-H1":{
 	left:'10dp',right:'10dp',
@@ -238,6 +241,12 @@
 	left:10,
 	size:24,
 	iconColor:'#ddd'
+},
+".switch-row-control": {
+	right: 10
+},
+".label-row-date": {
+	right: 20
 },
 ".textfield-row-control":{
 	height : '40dp',

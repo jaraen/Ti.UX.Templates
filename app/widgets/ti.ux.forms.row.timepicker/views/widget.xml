@@ -3,8 +3,8 @@
 
 		<View height="50" top="0">
 			<Widget src="ti.ux.iconfont" class="fa-row-icon" id="icon" ></Widget>
-			<Label class="label-row-title" id="titleLbl" left="35" />
-			<Label class="label-row-date" id="dateLbl" textAlign="right" right="20"/>
+			<Label class="label-row-title" id="titleLbl" />
+			<Label class="label-row-date" id="dateLbl" textAlign="right"/>
 		</View>
 
 		

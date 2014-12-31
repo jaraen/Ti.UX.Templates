@@ -3,9 +3,9 @@
 		
 		<Widget src="ti.ux.iconfont" class="fa-row-icon" id="icon" ></Widget>
 		
-		<Label class="label-row-title" id="titleLbl" left="35" />
+		<Label class="label-row-title" id="titleLbl" />
 
-		<Switch class="switch-row-control" id="switchControl" right="10" />
+		<Switch class="switch-row-control" id="switchControl" />
 		
 		<View class="view-row-separator" />
 		

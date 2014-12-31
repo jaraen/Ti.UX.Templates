@@ -1,7 +1,7 @@
 <Alloy>
 	<TableViewRow class="tableviewrow-form-row"  id="row" onClick="openPicker">
 		
-		<Widget src="ti.ux.iconfont" id="icon" left="10" size="20"></Widget>
+		<Widget src="ti.ux.iconfont" class="fa-row-icon" id="icon" ></Widget>
 		
 		<Label class="label-row-title" id="titleLbl" />
 		
