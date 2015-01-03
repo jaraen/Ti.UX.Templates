@@ -22,7 +22,7 @@ $.linkScrollableView = function(scrollable){
 	
 	for(var i = 0; i < countViews; i++){
 		views.push(Alloy.createWidget('ti.ux.pagingcontrol', 'dot',{left:8*i}).getView());
-
+		$.view.add(views[i]);
 		views[i].deactivate();
 	}
 		
@@ -30,15 +30,6 @@ $.linkScrollableView = function(scrollable){
 	dots.total = countViews;
 	
 	if(countViews) $.setActiveDot(0);
-	
-	if(OS_IOS){
-		$.view.add(views);
-	}
-	if(OS_ANDROID){
-		for(var i = 0, j = views.length; i<j; i++){
-			$.view.add(views[i]);
-		}
-	}
 	
 	views[0].activate();
 };
