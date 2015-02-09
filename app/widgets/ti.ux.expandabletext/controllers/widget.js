@@ -11,8 +11,14 @@ if(originalHeight) $.view.height = originalHeight;
 function expandText(e){
 	if(isExpanded){
 		$.view.height = originalHeight;
+		if (OS_ANDROID) {
+			$.row.height = originalHeight;
+		}
 	}else{
 		$.view.height = Ti.UI.SIZE;
+		if (OS_ANDROID) {
+			$.row.height = $.view.toImage().height;
+		}
 	}
 	
 	isExpanded = !isExpanded;

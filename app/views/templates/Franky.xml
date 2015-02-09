@@ -77,7 +77,7 @@
 				</FooterView>
 					
 	
-				<TableViewRow><Widget src="ti.ux.expandabletext" height="80" id="descriptionLabel"/></TableViewRow>
+				<Widget src="ti.ux.expandabletext" height="80" id="descriptionLabel"/>
 				
 				
 				<TableViewRow><Widget src="ti.ux.spacer" height="4" /></TableViewRow>
@@ -150,7 +150,7 @@
 	        <Module id="mapview" module="ti.map" method="createView" />
 		</Widget>
 
-		<Widget src="ti.ux.popup.list" animation="" id="servicesPopup" platform="ios" closeButton="true">
+		<Widget src="ti.ux.popup.list" animation="" id="servicesPopup" closeButton="true">
 				<Widget src="ti.ux.rowitem" icon="fa-phone" title="Phone"/>
 				<Widget src="ti.ux.rowitem" icon="fa-credit-card" title="Pay with Credit Card"/>
 				<Widget src="ti.ux.rowitem" icon="fa-coffee" title="Free Coffee" />

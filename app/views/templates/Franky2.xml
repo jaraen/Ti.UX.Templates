@@ -78,7 +78,7 @@
 				</FooterView>
 					
 	
-				<TableViewRow><Widget src="ti.ux.expandabletext" height="80" id="descriptionLabel"/></TableViewRow>
+				<Widget src="ti.ux.expandabletext" height="80" id="descriptionLabel"/>
 				
 				<TableViewRow><Widget src="ti.ux.spacer" height="4" /></TableViewRow>
 				
