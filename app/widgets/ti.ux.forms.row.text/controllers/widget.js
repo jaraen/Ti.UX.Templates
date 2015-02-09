@@ -32,13 +32,21 @@ function initUI(){
 
 function showValidationError(){
 	var icon = $.alertIcon.getView();
-	Animations.fadeIn(icon);
-	Animations.shake($.field, 200);
+	if (OS_ANDROID){
+		icon.show();
+	}else{
+		Animations.fadeIn(icon);
+		Animations.shake($.field, 200);
+	}
 }
 
 function hideValidationError(){
 	var icon = $.alertIcon.getView();
-	Animations.fadeOut(icon);
+	if (OS_ANDROID){
+		icon.hide();
+	}else{
+		Animations.fadeOut(icon);
+	}
 
 }
 
