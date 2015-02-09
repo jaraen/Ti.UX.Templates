@@ -1,6 +1,6 @@
 
  "#childrenImage":{
-	height:15, width:15,
+	height:28, width:15,
  },
 "#line":{
   bottom:0,
