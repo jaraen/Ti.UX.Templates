@@ -93,7 +93,7 @@
 				<TableViewRow>
 					<View height="120">
 						<Label textAlign="center" top="15" class="H2">Services</Label>
-						<ScrollView top="20">
+						<ScrollView top="20" scrollType="horizontal">
 							<Widget src="ti.ux.alignview"  height="Ti.UI.SIZE" width="640">
 								<Widget src="ti.ux.iconvalue" icon="fa-phone" class="serviceIcon"/>
 								<Widget src="ti.ux.iconvalue" icon="fa-credit-card" class="serviceIcon"/>
