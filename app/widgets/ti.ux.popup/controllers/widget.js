@@ -57,19 +57,26 @@ function cancelPopup(e){
 function fadeIn() {
 	$.bgView.open();
 //	$.bgView.opacity = 0;
-	$.bgView.visible = true;
-	animation.fadeIn($.bgView, 300, function(e) {
-//		$.bgView.opacity = 1;
-	});
+	
+	if (OS_IOS){
+		$.bgView.visible = true;
+		animation.fadeIn($.bgView, 300, function(e) {
+	//		$.bgView.opacity = 1;
+		});
+	}
 
 };
 
 function fadeOut() {
 
-	animation.fadeOut($.bgView, 300, function(e) {
-		$.bgView.visible = false;
-			$.bgView.close();
-	});
+	if (OS_ANDROID){
+		$.bgView.close();
+	}else{
+		animation.fadeOut($.bgView, 300, function(e) {
+			$.bgView.visible = false;
+				$.bgView.close();
+		});
+	}
 
 };
 

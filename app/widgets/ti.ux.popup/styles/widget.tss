@@ -1,0 +1,10 @@
+"Window": {
+	backgroundColor: "#9000"
+}
+"Window[platform=android]": {
+	theme: "Theme.AppCompat.Translucent.NoTitleBar"
+}
+"Window[platform=ios]": {
+	visible: false,
+	opacity: 0
+}
