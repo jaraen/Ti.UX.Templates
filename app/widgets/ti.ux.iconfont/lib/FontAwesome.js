@@ -5,6 +5,7 @@
  * Initial version by Kosuke Isobe - https://github.com/k0sukey
  * 
  * charcode update to 4.1.0 by Javier Rayon - 2014 https://github.com/jaraen
+ * charcode update to 4.3.0 by Hazem Khaled - 2015 https://github.com/hazemkhaled
  * 
  */
 
@@ -512,5 +513,47 @@ exports.charcode = {
 	'fa-yen': 0xf157,
 	'fa-youtube': 0xf167,
 	'fa-youtube-play': 0xf16a,
-	'fa-youtube-square': 0xf166
+	'fa-youtube-square': 0xf166,
+	// new icons for 4.3
+	'fa-bed': 0xf236,
+	'fa-buysellads': 0xf20d,
+	'fa-cart-arrow-down': 0xf218,
+	'fa-cart-plus': 0xf217,
+	'fa-connectdevelop': 0xf20e,
+	'fa-dashcube': 0xf210,
+	'fa-diamond': 0xf219,
+	'fa-facebook-official': 0xf230,
+	'fa-forumbee': 0xf211,
+	'fa-heartbeat': 0xf21e,
+	'fa-hotel': 0xf236,
+	'fa-leanpub': 0xf212,
+	'fa-mars': 0xf222,
+	'fa-mars-double': 0xf227,
+	'fa-mars-stroke': 0xf229,
+	'fa-mars-stroke-h': 0xf22b,
+	'fa-mars-stroke-v': 0xf22a,
+	'fa-medium': 0xf23a,
+	'fa-mercury': 0xf223,
+	'fa-motorcycle': 0xf21c,
+	'fa-neuter': 0xf22c,
+	'fa-pinterest-p': 0xf231,
+	'fa-sellsy': 0xf213,
+	'fa-server': 0xf233,
+	'fa-ship': 0xf21a,
+	'fa-shirtsinbulk': 0xf214,
+	'fa-simplybuilt': 0xf215,
+	'fa-skyatlas': 0xf216,
+	'fa-street-view': 0xf21d,
+	'fa-subway': 0xf239,
+	'fa-train': 0xf238,
+	'fa-transgender': 0xf224,
+	'fa-transgender-alt': 0xf225,
+	'fa-user-plus': 0xf234,
+	'fa-user-secret': 0xf21b,
+	'fa-user-times': 0xf235,
+	'fa-venus': 0xf221,
+	'fa-venus-double': 0xf226,
+	'fa-venus-mars': 0xf228,
+	'fa-viacoin': 0xf237,
+	'fa-whatsapp': 0xf232
 };
