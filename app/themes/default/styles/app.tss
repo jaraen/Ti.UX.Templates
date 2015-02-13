@@ -430,6 +430,9 @@
 /**
  * 	FRANKY
  */
+".iconlabelRowWidget": {
+	left: 10
+}
 ".tableviewrow-scrollableview":{
 	backgroundColor:"#fff"
 }

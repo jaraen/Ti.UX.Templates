@@ -39,8 +39,8 @@
 				
 				<TableViewRow><Widget src="ti.ux.spacer" height="10"/></TableViewRow>
 				
-				<TableViewRow><Widget src="ti.ux.iconlabel" text="Saturday, 28th Jun 2014 at 2 pm" icon="fa-clock-o" left="10" height="30" color="#666"/></TableViewRow>
-				<TableViewRow><Widget src="ti.ux.iconlabel" text="Tobacco Theater, Nes 75, Amsterdam" icon="fa-globe" left="10" height="30" color="#669" id="locationLabel"/></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.iconlabel" class="iconlabelRowWidget" text="Saturday, 28th Jun 2014 at 2 pm" icon="fa-clock-o" height="30" color="#666"/></TableViewRow>
+				<TableViewRow><Widget src="ti.ux.iconlabel" class="iconlabelRowWidget" text="Tobacco Theater, Nes 75, Amsterdam" icon="fa-globe" height="30" color="#669" id="locationLabel"/></TableViewRow>
 				
 				<TableViewRow><Widget src="ti.ux.spacer" height="10"/></TableViewRow>
 				
@@ -78,7 +78,7 @@
 				</FooterView>
 					
 	
-				<TableViewRow><Widget src="ti.ux.expandabletext" height="80" id="descriptionLabel"/></TableViewRow>
+				<Widget src="ti.ux.expandabletext" height="80" id="descriptionLabel"/>
 				
 				<TableViewRow><Widget src="ti.ux.spacer" height="4" /></TableViewRow>
 				
@@ -93,7 +93,7 @@
 				<TableViewRow>
 					<View height="120">
 						<Label textAlign="center" top="15" class="H2">Services</Label>
-						<ScrollView top="20">
+						<ScrollView top="20" scrollType="horizontal">
 							<Widget src="ti.ux.alignview"  height="Ti.UI.SIZE" width="640">
 								<Widget src="ti.ux.iconvalue" icon="fa-phone" class="serviceIcon"/>
 								<Widget src="ti.ux.iconvalue" icon="fa-credit-card" class="serviceIcon"/>

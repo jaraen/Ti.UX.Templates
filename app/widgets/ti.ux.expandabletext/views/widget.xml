@@ -1,7 +1,9 @@
 <Alloy>
-	<View class="view-height-fit" onClick="expandText" id="view">
-		<Label class="label-paragraph" id="label" />
-	</View>
+	<TableViewRow id="row">
+		<View class="view-height-fit" onClick="expandText" id="view">
+			<Label class="label-paragraph" id="label" />
+		</View>
+	</TableViewRow>
 </Alloy>
 
 

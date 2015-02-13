@@ -26,10 +26,12 @@ function initUI(){
 		$.childrenImage.hide();
 	}
 	
-	if(OS_IOS && args.hasChildren){
-		$.row.selectionStyle = Ti.UI.iPhone.TableViewCellSelectionStyle.BLUE;
-	}else{
-		$.row.selectionStyle = Ti.UI.iPhone.TableViewCellSelectionStyle.NONE;
+	if(OS_IOS){
+		if(args.hasChildren){
+			$.row.selectionStyle = Ti.UI.iPhone.TableViewCellSelectionStyle.BLUE;
+		}else{
+			$.row.selectionStyle = Ti.UI.iPhone.TableViewCellSelectionStyle.NONE;
+		}
 	}
 	$.row.data = args;
 	
