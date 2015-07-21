@@ -37,6 +37,7 @@
         "ti.ux.forms.row.text":"1.0",
         "ti.ux.forms.row.timepicker":"1.0",
         "ti.ux.forms.text":"1.0",
+        "ti.ux.forms.popup.picker":"1.0",
         "ti.ux.forms.scrollableform":"1.0"
 
      }

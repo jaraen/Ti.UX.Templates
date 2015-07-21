@@ -82,7 +82,18 @@ function openPicker(e){
 		
 	}else if(type === TYPE_MODALWINDOW){
 		Ti.API.info('ti.ux.forms.optionspicker: modal window');
-		alert('modal window not implemented yet');
+		// alert('modal window not implemented yet');
+		var popupDialog = Alloy.createWidget('ti.ux.forms.popup.picker', 'widget', {closeButton:true, options:$.OPTIONS, value:$.value, title: 'Select an option:'});		
+		popupDialog.viewPicker.addEventListener('change', function(e){
+			Ti.API.info('optionSelected ' + JSON.stringify(e));
+			$.value = e.rowIndex;
+			Ti.API.info('index set to ' + $.value);
+			$.subtitleLbl.text = e.row.title;
+			//  popupDialog.hide();  // Use this if closeButton == false
+		});
+		Ti.API.info('modal window calling show:');
+		popupDialog.getView().show();
+		popupDialog.show();
 	}
 }
 

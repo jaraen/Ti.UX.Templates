@@ -41,6 +41,7 @@
 
 				<Widget src="ti.ux.forms.row.optionspicker" title="Repeat" value="1" cancel="3" options="Never|Each hour|Everyday|Cancel" icon="fa-repeat"/>
 				<Widget src="ti.ux.forms.row.optionspicker" title="Show as" value="0" options="Busy|Free|Playing|Coding|Surfing|Freaking|Drinking|Eating|Meditating" dialogType="popup" icon="fa-user"/>
+				<Widget src="ti.ux.forms.row.optionspicker" title="Show as (modal)" value="3" options="Busy|Free|Playing|Coding|Surfing|Freaking|Drinking|Eating|Meditating" dialogType="modalwindow" icon="fa-user"/>
 				<Widget src="ti.ux.forms.row.optionspicker" title="Alert" value="1" options="None|On day of event|1 day before|2 days before|1 week before" dialogType="dialog" icon="fa-bell-o"/>
 
 				<Widget src="ti.ux.forms.row.switch" title="Add location" value="false" icon="fa-map-marker"  />
