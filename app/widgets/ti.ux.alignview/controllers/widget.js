@@ -37,39 +37,41 @@ function drawChildren(children){
 	$.childrenViews = views;
 	
 	//postLayout event does not work if the parents container also is listening to this event
-//	$.view.addEventListener('postlayout', sortChildren);
+	$.view.addEventListener('postlayout', sortChildren);
 	
 	//TODO: This is a workaroung for the postlayout issues. Not a good practice, btw.
-	setTimeout(sortChildren, 200);
+	// setTimeout(sortChildren, 200);
 	
 }
 
+var didSort = false;
+
 function sortChildren(){
-
-	var views = $.childrenViews;
-	
-	//$.view.removeEventListener('postlayout', sortChildren);
-	var w = 0, factor = 0;
-	
-	if(args.width){
-		w = args.width;	
-		factor = 0.5;
-	}else{
-		w = $.view.rect.width;
-		factor = 1;
-	}
-	
-	var distance = (w / views.length);
-	
-	//we want to distribute horizontally all elements based on their vertical center axis
-	for(var i = 0, j = views.length; i < j; i++){
+	if(!didSort){
+		var views = $.childrenViews;
 		
-		views[i].left = distance * (i + factor) - views[i].rect.width / 2 - distance / 2;
-		Ti.API.info('width element ' + views[i].rect.width + ' w ' + w + ' distance: ' + distance + ' final left: ' + views[i].left);
+		//$.view.removeEventListener('postlayout', sortChildren);
+		var w = 0, factor = 0;
 		
-	}
-
+		if(args.width){
+			w = args.width;	
+			factor = 0.5;
+		}else{
+			w = $.view.rect.width;
+			factor = 1;
+		}
 		
+		var distance = (w / views.length);
+		
+		//we want to distribute horizontally all elements based on their vertical center axis
+		for(var i = 0, j = views.length; i < j; i++){
+			
+			views[i].left = distance * (i + factor) - views[i].rect.width / 2 - distance / 2;
+			Ti.API.info('width element ' + views[i].rect.width + ' w ' + w + ' distance: ' + distance + ' final left: ' + views[i].left);
+			
+		}
+		didSort = true;
+	}	
 }
 
 
