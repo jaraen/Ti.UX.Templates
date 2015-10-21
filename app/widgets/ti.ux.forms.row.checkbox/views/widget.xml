@@ -1,0 +1,11 @@
+<Alloy>
+	<TableViewRow class="tableviewrow-rowitem" id="row">
+		<View layout="horizontal">
+			<Label class="label-row-hint" id="labelHintText" textAlign="left" left="20dp"/>
+			<ImageView id="imageCheck" image="/images/checkbox-icon.png" height="15dp" width="15dp" left="20dp"></ImageView>
+			<Label class="label-row-title" id="titleLbl" textAlign="center" left="20dp"/>
+		</View>
+	</TableViewRow>
+</Alloy>
+
+

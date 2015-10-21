@@ -1,14 +1,17 @@
 <Alloy>
-	<View id="container" class="view-height-fit">
-		
-		<View class="view-forms-text-container" onClick="focus" id="view">
-			<ActivityIndicator id="actInd" class="activityindicator-forms-text"/>
+	<View id="container" >	
+		<View  onClick="focus" id="view" top="10dp">
+			<!--ActivityIndicator id="actInd" class="activityindicator-forms-text"/>
 			<ImageView id="alertImage" class="image-forms-text-alert" />
 			<Label id="titleLbl" class="label-forms-text-title" />
-			<View class="view-forms-text-separator"/>
-			<TextField id="field" class="textfield-forms-text" onChange="hideValidationError"/>
+			<View class="view-forms-text-separator" id="separator" /-->
+			<TextField id="field" class="textfield-forms-text" onChange="hideValidationError" hintText=""/>
+			<View id="labelsView" >
+				<Label id="lblHintText" />
+				<Label id="lblHintIcon" class="lblFontIcon" />
+				<ImageView id="alertImage" class="image-forms-text-alert" />
+			</View>
 		</View>
-		
 		<Label id="tipText" class="label-forms-text-tiptext" />
 		<Label id="errorText" class="label-forms-text-errortext" />
 	</View>
