@@ -1,0 +1,59 @@
+"#view":{
+	borderColor : Alloy.Globals.colors.bgSignupHeader,
+	height : Titanium.UI.SIZE,
+	//width : Titanium.UI.SIZE
+	backgroundColor : Alloy.Globals.colors.white,
+	top : '10dp',
+	borderRadius : '3dp'
+},
+
+"#titleLbl":{
+	color : Alloy.Globals.colors.bgSignupHeader,
+	font : Alloy.Globals.fontSizes.med_l_l_bold
+},
+
+"#labelsView":{
+	height: "40dp",
+	width : Ti.UI.FILL
+},
+
+"#lblHintText":{
+	font : Alloy.Globals.fontSizes.med_l_bold,
+	color : Alloy.Globals.colors.gray,
+	left : "10dp"
+},
+
+"#lblHintIcon":{
+	right : "5dp",
+	width : "30dp"
+},
+
+"#alertImage":{
+	top : "5dp",
+	right :"5dp"
+}
+
+"#field":{
+	font : Alloy.Globals.fontSizes.med_l_bold,
+	height : '40dp',
+	left : '5dp',
+	right : '5dp'
+},
+
+".lblFontIcon":{
+	//top: '5dp',
+	font: {
+		fontSize : '24dp',
+	},
+	color : Alloy.Globals.colors.gray
+}
+".lblFontIcon[platform=android]":{
+	font: {
+		fontFamily: 'ss-glyphish-outlined'
+	}
+}
+".lblFontIcon[platform=ios]":{
+	font: {
+		fontFamily: 'SSGlyphish-Outlined'
+	}
+}
