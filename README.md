@@ -132,6 +132,18 @@ Properties:
 `title`: Title to show in the row
 `value` : true | false Default value for the switch
 
+### ti.ux.forms.row.checkbox
+
+Extends TableViewRow to be used in a settings form. Adds a checkbox to the form
+
+Properties:
+`title`
+`checkValue`
+`checkedIcon`
+`checkboxIcon`
+`hintTextValue`
+
+
 
 ### ti.ux.forms.row.text
 
@@ -164,6 +176,49 @@ Properties:
 If `textarea` is used in `type` property, a modal window opens with a big text area when the control receives the focus.
 
 Email, url, number and so on uses their own validators and customizes the keyboard
+
+### ti.ux.forms.popup.datepicker
+
+A customizable, centered popup modal to show a date picker.
+
+One can listen to the change events to get the selected value:
+
+```javascript
+var popupBirthDate = Alloy.createWidget('ti.ux.forms.popup.datepicker', {
+	id : 'popupBirthDate',
+	closeButton : true,
+	viewText : "Select your birth date:",
+	viewColor : "white"
+});
+
+popupBirthDate.viewPicker.addEventListener('change', function(e) {
+  Ti.API.info("Got value from popup.datepicker: " + JSON.stringify(e));
+});
+
+popupBirthDate.show();
+```
+
+### ti.ux.forms.popup.picker
+
+A customizable, centered popup modal to show a picker with pre-defined options.
+
+```javascript
+var data = [];
+data[0] = 'Apples';
+data[1] = 'Bananas';
+data[2] = 'Oranges';
+
+var popupFruits = Alloy.createWidget('ti.ux.forms.popup.picker', {
+	id : 'popupFruits',
+	closeButton : true,
+	options : data,
+	value : 0,
+	viewText : "Select favorite:",
+	viewColor : "white"
+});
+
+popupFruits.show();
+```
 
 
 ### ti.ux.forms.scrollableform
@@ -293,6 +348,47 @@ Have a look to lib/validators.js to see a few examples of validators.
 
 A boxed label and textfield with validation methods. Includes a title above the textfield. Thought to be used in scrollable step-by-step forms.
 
+### ti.ux.forms.inline-text
+
+A boxed textfield with validation methods. Includes errorText messages to show when user clicks error icon.
+Thought to be used in smaller/one-page forms.
+
+```javascript
+var firstName = Alloy.createWidget('ti.ux.forms.inline-text', {
+	id : 'first_name',
+	title : 'Name',
+	inputType : 'text',
+	mandatory : true, // if true, can't be blank
+	tipText : 'Please, fill in your first name', // this will show up if the user clicks the error icon
+	autofocus : true,
+	left : "0dp",
+	width : "80%",
+	top : '0dp',
+        height: "45dp"
+});
+```
+
+Custom validation is also supported:
+```javascript
+var password = Alloy.createWidget('ti.ux.forms.inline-text', {
+	id : 'password',
+	title : 'Password',
+	inputType : 'password',
+	width : "90%",
+	mandatory : true,
+	tipText : 'Set your password',
+	errorText : 'The password must contain at least 7 characters',
+	autofocus : true,
+	validate : function(value) {//customize our own password validation
+		Ti.API.info('custom validation called w value: ' + value);
+		return value && ("" + value).length >= 7;
+	},
+	iconFont : "\uD83D\uDD12",
+	top : '6dp',
+  height: "45dp"
+});
+```
+
 ### ti.ux.iconbutton
 
 A button that accepts [FontAwesome 4.1.0 codes](http://fortawesome.github.io/Font-Awesome/icons/). Fully customizable.
@@ -398,7 +494,6 @@ to show the popup
 ```javascript
 	$.mapPopup.show();
 ```
-
 
 ### ti.ux.popup.list
 
