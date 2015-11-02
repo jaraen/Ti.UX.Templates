@@ -15,7 +15,7 @@
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>d942fbc6-9ae1-4453-8bac-8d944e00b560</guid>
+    <guid>6d0551da-489b-4079-9eee-158d356aa75e</guid>
     <property name="ti.ui.defaultunit" type="string">dip</property>
     <iphone>
         <min-ios-ver>6.0</min-ios-ver>
@@ -50,8 +50,9 @@
         <target device="mobileweb">false</target>
         <target device="tizen">false</target>
     </deployment-targets>
-    <sdk-version>3.2.3.GA</sdk-version>
+    <sdk-version>4.0.0.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
+    <property name="appc-app-id" type="string">55ae7fbcde87edb862d35f84</property>
 </ti:app>

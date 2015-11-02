@@ -1,0 +1,13 @@
+{
+	"id": "ti.ux.forms.row.checkbox",
+	"name": "ti.ux.forms.row.checkbox",
+	"description" : "an extended tableviewrow",
+	"author": "Mike Kazmier",
+	"version": "1.1",
+	"copyright":"Copyright (c) 2015",
+	"license":"Public Domain",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"3.1",
+	"tags":"",
+	"platforms":"android,ios"
+}

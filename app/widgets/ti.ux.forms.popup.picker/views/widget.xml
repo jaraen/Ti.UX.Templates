@@ -1,0 +1,15 @@
+<Alloy>
+	<Window id="bgView" onClick="cancelPopup" class="view-popup-background" visible="false" backgroundColor="#9000" opacity="0" navBarHidden="true" tabBarHidden="true" theme="Theme.AppCompat.Translucent.NoTitleBar">
+		<View id="view" class="view-popup-container" left="20dp" right="20dp" top="50dp" bottom="50dp" backgroundColor="#fff" borderRadius="5dp">
+			<Widget src="ti.ux.iconbutton" icon="fa-times-circle" top="-4dp" right="-2dp" size="26dp" zIndex="9999" iconColor="#000" id="closeBtn"/>
+
+      <View id="container" top="2dp" bottom="2dp" left="2dp" right="2dp" layout="vertical">
+        <Picker id="viewPicker" type="Titanium.UI.PICKER_TYPE_PLAIN" top="30dp" useSpinner="true" selectionIndicator="true" visible="false"></Picker>
+        <View id="paddingBottom" top="0dp" backgroundColor="transparent" height="30dp"/>
+      </View>
+		</View>
+
+	</Window>
+</Alloy>
+
+

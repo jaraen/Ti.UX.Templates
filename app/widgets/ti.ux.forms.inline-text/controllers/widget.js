@@ -160,3 +160,9 @@ $.getFieldValue = function() {
 	return $.field.value;
 };
 
+$.clear = function() {
+  $.field.value = "";
+  $.field.focus();
+  $.field.blur();
+}
+

@@ -1,0 +1,11 @@
+"#bgView": {
+  height: Ti.UI.SIZE
+}
+
+"#view": {
+  height: Ti.UI.SIZE
+}
+
+"#container": {
+  height: Ti.UI.SIZE
+}

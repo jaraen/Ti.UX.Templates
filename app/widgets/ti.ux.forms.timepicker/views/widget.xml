@@ -1,0 +1,11 @@
+<Alloy>
+	<View id="viewPicker" visible="false">
+		<Picker id="picker" visible="false"
+			top="40"
+	          onChange="updateLabels"
+	          type="Ti.UI.PICKER_TYPE_DATE_AND_TIME">
+        </Picker>
+    </View>
+</Alloy>
+
+

@@ -1,0 +1,13 @@
+"#labelHintText":{
+	color : Alloy.Globals.colors.gray,
+	font : Alloy.Globals.fontSizes.med_l_l_bold
+},
+
+"#titleLbl":{
+	color : Alloy.Globals.colors.white,
+	font : Alloy.Globals.fontSizes.l_bold
+},
+".tableviewrow-rowitem":{
+  	height : '25dp'
+}
+
