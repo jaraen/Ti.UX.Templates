@@ -1,0 +1,23 @@
+{
+	"version": "1.0.1",
+	"description": "An image container for ti.ux.remoteimageview that adds a simple vertical parallax effect.",
+	"author": "Javier Rayon",
+	"license": "Apache License, Version 2.0",
+	"name": "ti.ux.image",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:jaraen/Ti.UX.Templates.git"
+	},
+	"bugs": {
+		"url": "https://github.com/jaraen/Ti.UX.Templates/issues"
+	},
+	"homepage": "https://github.com/jaraen/Ti.UX.Templates#readme",
+	"dependencies": {
+		"com.criteriastudio.RemoteImageView": "1.0.1"
+	},
+	"keywords": [
+		"alloy",
+		"alloy-widget",
+		"appcelerator"
+	]
+}
