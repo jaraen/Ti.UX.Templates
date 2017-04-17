@@ -23,7 +23,7 @@ to your xml files and 100% customizables from style files.
 
 Find more info about ux mobile patterns in our website [www.uxmobilepatterns.com](http://www.uxmobilepatterns.com) or contact us by twitter at @jrayon and @sonianoneka
 
-##Multiplatform Support
+## Multiplatform Support
 
 The project has been developed for and fully works on iPhone. Although the UX has been designed with iPhone users in mind, most components also work on android
 and our intention is to give full support to the templates and widgets working in both platforms.
